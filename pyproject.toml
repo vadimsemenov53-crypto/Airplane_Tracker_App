@@ -25,6 +25,9 @@ lint = [
     "mypy (>=1.19.1,<2.0.0)",
     "flake8 (>=7.3.0,<8.0.0)"
 ]
+dev = [
+    "types-requests (>=2.32.4.20260107,<3.0.0.0)"
+]
 
 [tool.mypy]
 disallow_untyped_defs = true
