@@ -1,5 +1,3 @@
-from json import JSONDecodeError
-from requests import get, RequestException
 from src.base_api_work import BaseApiWork
 
 class APICoordinates(BaseApiWork):
@@ -33,10 +31,10 @@ class APICoordinates(BaseApiWork):
     def get_coordinates(self) -> None:
         """ Метод, для получения координат из JSON-ответа от API сервиса """
         #Пример ответа от nominatim.openstreetmap можно посмотреть в задании курсовой.
-        try:
-            geo_coordinates = self.data_response[0].get('boundingbox')
-        except IndexError as e:
-            print(f'Ошибка индекса поиска значений: {e}')
+        if not self.data_response:
+            raise ValueError('Полученные данные пустые.')
+
+        geo_coordinates = self.data_response[0].get('boundingbox')
 
         #Параметры для фильтрации самолетов по их географическим координатам.
         self.coordinates = {
@@ -51,7 +49,7 @@ class APIAircraft(BaseApiWork):
     """ Класс, для обращения к внешнему сервису для получения информации о самолетах которые находятся
     в квадрате координат. """
     coordinates: dict[str, str]
-    aeroplanes: str | None
+    aeroplanes: dict | None
 
 
     def __init__(self) -> None:
@@ -64,14 +62,3 @@ class APIAircraft(BaseApiWork):
         """ Метод обращения к внешнему API и получения информации о самолетах. """
 
         self.aeroplanes = self.make_request(self.url, params=coordinates)
-
-
-api = APICoordinates()
-api.get_response_api('Germany')
-api.get_coordinates()
-
-print(api.data_response)
-api_2 = APIAircraft()
-api_2.get_response_api(api.coordinates)
-
-print(api_2.aeroplanes)

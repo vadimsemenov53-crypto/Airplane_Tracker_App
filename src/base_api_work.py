@@ -4,7 +4,8 @@ from abc import ABC, abstractmethod
 class BaseApiWork(ABC):
     """ Базовый класс для работы с API сервисами """
 
-    def make_request(self, url, params, headers=None) -> str:
+    @staticmethod
+    def make_request(url, params, headers=None) -> dict | list:
         response = requests.get(url, params=params, headers=headers)
         response.raise_for_status()
 

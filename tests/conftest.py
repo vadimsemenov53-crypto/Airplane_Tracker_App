@@ -26,3 +26,43 @@ def response_from_map():
         ]
     }
 ]
+
+
+@pytest.fixture()
+def coordinates_from_aircraft():
+    """ Фикстура возвращает координаты для работы с API-сервисом https://opensky-network.org/api/states/all? """
+    return {
+        'lamax': '83.3362128',
+        'lamin': '41.6765597',
+        'lomax': '-52.3237664',
+        'lomin': '-141.0027500'
+    }
+
+
+@pytest.fixture()
+def data_airplanes():
+    """ Фикстура возвращает ответ от API-сервиса https://opensky-network.org/api/states/all? """
+    return {
+    "time": 1766142246,
+        "states": [
+            [
+                "4b1812",
+                "SWR438A ",
+                "Switzerland",
+                1766166618,
+                1766166618,
+                -0.0168,
+                51.0888,
+                4267.2,
+                False,
+                189.7,
+                129.39,
+                14.63,
+                0,
+                4282.44,
+                "2061",
+                False,
+                0
+        ],
+    ]
+}
