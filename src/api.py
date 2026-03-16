@@ -11,6 +11,7 @@ class APICoordinates(BaseApiWork):
         self.coordinates = None
         self.data_response = None
 
+
     def get_response_api(self, country: str) -> None:
         """ Метод обращения к внешнему API и получения координат квадрата переданной страны. """
         #Headers с user-agent - обязательный параметр при запросе к nominatim.openstreetmap.
@@ -26,16 +27,7 @@ class APICoordinates(BaseApiWork):
             'limit': 1,
         }
 
-        try:
-            response = get(url=self.url, params=params_nominatim, headers=headers_nominatim)
-            self.data_response = response.json()
-            print("Успешный ответ API")
-
-        except RequestException as e:
-            print(f"Ошибка API: {e}")
-
-        except JSONDecodeError as e:
-            print(f'Ошибка JSON: {e}')
+        self.data_response = self.make_request(self.url, params_nominatim, headers_nominatim)
 
 
     def get_coordinates(self) -> None:
@@ -59,32 +51,26 @@ class APIAircraft(BaseApiWork):
     """ Класс, для обращения к внешнему сервису для получения информации о самолетах которые находятся
     в квадрате координат. """
     coordinates: dict[str, str]
-    aeroplanes: dict | None
+    aeroplanes: str | None
+
 
     def __init__(self) -> None:
         """ Метод - конструктор, для инициализации объектов класса. """
         self.url = 'https://opensky-network.org/api/states/all?'
         self.aeroplanes = None
 
+
     def get_response_api(self, coordinates: dict[str, str]) -> None:
         """ Метод обращения к внешнему API и получения информации о самолетах. """
 
-        try:
-            response = get(url=self.url, params=coordinates)
-            self.aeroplanes = response.json()
-            print("Успешный ответ API")
-
-        except RequestException as e:
-            print(f"Ошибка API: {e}")
-
-        except JSONDecodeError as e:
-            print(f'Ошибка JSONDecodeError: {e}')
+        self.aeroplanes = self.make_request(self.url, params=coordinates)
 
 
 api = APICoordinates()
 api.get_response_api('Germany')
 api.get_coordinates()
 
+print(api.data_response)
 api_2 = APIAircraft()
 api_2.get_response_api(api.coordinates)
 
