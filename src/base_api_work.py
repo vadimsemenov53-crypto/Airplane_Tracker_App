@@ -17,7 +17,7 @@ class BaseApiWork(ABC):
         except HTTPError as e:
             raise RuntimeError(f'Ошибка HTTP: {e}') from e
         except RequestException as e:
-            raise RuntimeError(f'Ошибка запроса к API: {e}') from e
+            raise RuntimeError(f'Ошибка RequestException: {e}') from e
 
         try:
             return response.json()
