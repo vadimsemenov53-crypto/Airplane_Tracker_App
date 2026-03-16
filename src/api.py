@@ -5,9 +5,15 @@ class APICoordinates(BaseApiWork):
 
     def __init__(self) -> None:
         """ Метод - конструктор, для инициализации объектов класса. """
-        self.url = 'https://nominatim.openstreetmap.org/search'
-        self.coordinates = None
-        self.data_response = None
+        self.__url = 'https://nominatim.openstreetmap.org/search'
+        self._coordinates = None
+        self._data_response = None
+
+
+    @property
+    def url(self):
+        """ Метод получения приватного значения URL """
+        return self.__url
 
 
     def get_response_api(self, country: str) -> None:
@@ -25,19 +31,19 @@ class APICoordinates(BaseApiWork):
             'limit': 1,
         }
 
-        self.data_response = self.make_request(self.url, params_nominatim, headers_nominatim)
+        self._data_response = self._make_request(self.__url, params_nominatim, headers_nominatim)
 
 
     def get_coordinates(self) -> None:
         """ Метод, для получения координат из JSON-ответа от API сервиса """
         #Пример ответа от nominatim.openstreetmap можно посмотреть в задании курсовой.
-        if not self.data_response:
+        if not self._data_response:
             raise ValueError('Полученные данные пустые.')
 
-        geo_coordinates = self.data_response[0].get('boundingbox')
+        geo_coordinates = self._data_response[0].get('boundingbox')
 
         #Параметры для фильтрации самолетов по их географическим координатам.
-        self.coordinates = {
+        self._coordinates = {
             'lamin': geo_coordinates[0],
             'lamax': geo_coordinates[1],
             'lomin': geo_coordinates[2],
@@ -48,17 +54,22 @@ class APICoordinates(BaseApiWork):
 class APIAircraft(BaseApiWork):
     """ Класс, для обращения к внешнему сервису для получения информации о самолетах которые находятся
     в квадрате координат. """
-    coordinates: dict[str, str]
-    aeroplanes: dict | None
+    _coordinates: dict[str, str]
+    _aeroplanes: dict | None
 
 
     def __init__(self) -> None:
         """ Метод - конструктор, для инициализации объектов класса. """
-        self.url = 'https://opensky-network.org/api/states/all?'
-        self.aeroplanes = None
+        self.__url = 'https://opensky-network.org/api/states/all?'
+        self._aeroplanes = None
+
+    @property
+    def url(self):
+        """ Метод получения приватного значения URL """
+        return self.__url
 
 
     def get_response_api(self, coordinates: dict[str, str]) -> None:
         """ Метод обращения к внешнему API и получения информации о самолетах. """
 
-        self.aeroplanes = self.make_request(self.url, params=coordinates)
+        self._aeroplanes = self._make_request(self.__url, params=coordinates)
