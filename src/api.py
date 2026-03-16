@@ -1,5 +1,5 @@
-import json
-from requests import get
+from json import JSONDecodeError
+from requests import get, RequestException
 from src.base_api_work import BaseApiWork
 
 class APICoordinates(BaseApiWork):
@@ -26,13 +26,25 @@ class APICoordinates(BaseApiWork):
             'limit': 1,
         }
 
-        response = get(url=self.url, params=params_nominatim, headers=headers_nominatim)
-        self.data_response = response.json()
+        try:
+            response = get(url=self.url, params=params_nominatim, headers=headers_nominatim)
+            self.data_response = response.json()
+            print("Успешный ответ API")
+
+        except RequestException as e:
+            print(f"Ошибка API: {e}")
+
+        except JSONDecodeError as e:
+            print(f'Ошибка JSON: {e}')
+
 
     def get_coordinates(self) -> None:
         """ Метод, для получения координат из JSON-ответа от API сервиса """
         #Пример ответа от nominatim.openstreetmap можно посмотреть в задании курсовой.
-        geo_coordinates = self.data_response[0].get('boundingbox')
+        try:
+            geo_coordinates = self.data_response[0].get('boundingbox')
+        except IndexError as e:
+            print(f'Ошибка индекса поиска значений: {e}')
 
         #Параметры для фильтрации самолетов по их географическим координатам.
         self.coordinates = {
@@ -47,7 +59,7 @@ class APIAircraft(BaseApiWork):
     """ Класс, для обращения к внешнему сервису для получения информации о самолетах которые находятся
     в квадрате координат. """
     coordinates: dict[str, str]
-    aeroplanes: (json, None)
+    aeroplanes: dict | None
 
     def __init__(self) -> None:
         """ Метод - конструктор, для инициализации объектов класса. """
@@ -56,9 +68,17 @@ class APIAircraft(BaseApiWork):
 
     def get_response_api(self, coordinates: dict[str, str]) -> None:
         """ Метод обращения к внешнему API и получения информации о самолетах. """
-        response = get(url=self.url, params=coordinates)
 
-        self.aeroplanes =  response.json()
+        try:
+            response = get(url=self.url, params=coordinates)
+            self.aeroplanes = response.json()
+            print("Успешный ответ API")
+
+        except RequestException as e:
+            print(f"Ошибка API: {e}")
+
+        except JSONDecodeError as e:
+            print(f'Ошибка JSONDecodeError: {e}')
 
 
 api = APICoordinates()
