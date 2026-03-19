@@ -1,4 +1,5 @@
 import pytest
+
 from src.airplane import Airplane
 
 
@@ -100,9 +101,9 @@ def data_airplanes():
 
 @pytest.fixture()
 def airplane_1():
-    return Airplane('Germany', 'ECA4RT', 222.98, 0.33, 13716)
+    return Airplane("Germany", "ECA4RT", 222.98, 0.33, 13716)
 
 
 @pytest.fixture()
 def airplane_2():
-    return Airplane('Spain', 'LVL2604', 309.77, 0, 11582.4)
+    return Airplane("Spain", "LVL2604", 309.77, 0, 11582.4)
