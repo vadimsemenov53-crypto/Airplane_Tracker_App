@@ -7,9 +7,9 @@ class Airplane:
         """Метод - конструктор, для инициализации объектов класса."""
         self.country = country
         self.callsign = callsign
-        self.velocity = velocity
+        self.velocity = self._validate_velocity(velocity)
         self.vertical_rate = vertical_rate
-        self.bar_altitude = bar_altitude
+        self.bar_altitude = self._validate_bar_altitude(bar_altitude)
 
     @staticmethod
     def _validate_velocity(velocity: float) -> float:
