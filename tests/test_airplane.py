@@ -33,3 +33,11 @@ def test_airplane_all_magic(airplane_1, airplane_2):
     assert airplane_1.__ge__(airplane_2) == True
     assert airplane_1.__eq__(airplane_2) == False
     assert airplane_1.__ne__(airplane_2) == True
+
+
+def test_airplane_magic_error(airplane_1):
+    assert airplane_1.__eq__('222') == NotImplemented
+    assert airplane_1.__eq__({'Bar' : 2222}) == NotImplemented
+
+    assert airplane_1.__ne__('222') == NotImplemented
+    assert airplane_1.__ne__({'Bar': 2222}) == NotImplemented
