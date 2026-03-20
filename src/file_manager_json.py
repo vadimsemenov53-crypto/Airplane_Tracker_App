@@ -14,10 +14,13 @@ class FileManagerJson(BaseFileManagerJSON):
      4. Удаление данных о самолете из файла (требуется передать путь до файла и
      передать словарь с критериями.)"""
 
-    def save_to_json_file(self, data: dict | list, path_to_save: str) -> None:
+    def save_to_json_file(self, data: list[dict[str, str | int | float | None]], path_to_save: str) -> None:
         """ Метод записи переданных данных в файл (JSON). """
         if not data:
             raise ValueError('Переданы пустые данные.')
+
+        if os.path.isdir(path_to_save):
+            path_to_save = os.path.join(path_to_save, "data.json")
 
         os.makedirs(os.path.dirname(path_to_save), exist_ok=True)
 
@@ -28,36 +31,31 @@ class FileManagerJson(BaseFileManagerJSON):
         except OSError as e:
             raise RuntimeError(f'Ошибка записи: {e}') from e
 
-    def read_file_json(self, path_to_file: str) -> str:
+    def read_file_json(self, path_to_file: str) -> list[dict[str, str | int | float | None]]:
         """ Метод чтения данных из файла (JSON). """
         try:
             with open(path_to_file, 'r', encoding='utf-8') as file:
                 return json.load(file)
 
         except FileNotFoundError as e:
-            raise FileNotFoundError(f'Файл не найден: {e}')
+            raise FileNotFoundError(f'Файл не найден: {path_to_file}') from e
 
         except JSONDecodeError as e:
             raise RuntimeError(f'Ошибка JSON: {e}') from e
 
 
-    def add_info_file_json(self, data: dict[str, str | int | float | None], path_to_file: str) -> None:
+    def add_info_file_json(self, airplane: Airplane, path_to_file: str) -> None:
         """ Метод добавления информации о самолете в файл (JSON). """
-        try:
-            with open(path_to_file, 'r', encoding='utf-8') as file:
-                data_file = json.load(file)
+        data = airplane.get_dict_from_airplane()
 
-        except FileNotFoundError as e:
-            raise FileNotFoundError(f'Файл не найден: {e}')
+        data_file = self.read_file_json(path_to_file)
+
+        if not isinstance(data_file, list):
+            raise TypeError("Файл должен содержать список объектов")
 
         data_file.append(data)
 
-        try:
-            with open(path_to_file, 'w', encoding='utf-8') as file:
-                json.dump(data_file, file, indent=2, ensure_ascii=False, default=str)
-
-        except OSError as e:
-            raise RuntimeError(f'Ошибка записи: {e}') from e
+        self.save_to_json_file(data_file, path_to_file)
 
 
 
@@ -74,4 +72,8 @@ if __name__ == '__main__':
                         "vertical_rate": 455,
                         "bar_altitude": 346346,
                     }]
-    print(ex_1.read_file_json('/Users/vadimsemenov/PycharmProjects/Airplane_Tracker_App/data/example_1.json'))
+    print(ex_1.save_to_json_file(data, '/Users/vadimsemenov/PycharmProjects/Airplane_Tracker_App/data/example_1.json'))
+
+    air_1 = Airplane("Spain1111", "LVL2604", 309.77, 0, 11582.4)
+    ex_1.add_info_file_json(air_1,
+                            '/Users/vadimsemenov/PycharmProjects/Airplane_Tracker_App/data/example_1.json')
