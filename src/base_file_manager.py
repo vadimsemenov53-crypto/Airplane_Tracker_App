@@ -4,17 +4,20 @@ class BaseFileManagerJSON(ABC):
     """ Базовый класс для работы с данными о самолетах в формате JSON. """
 
     @abstractmethod
-    def _save_to_json_file(self, data, path_to_save: str):
+    def save_to_json_file(self, data: dict | list, path_to_save: str) -> None:
+        """ Метод записи переданных данных в файл (JSON). """
         pass
 
-    # @abstractmethod
-    # def _read_file_json(self):
-    #     pass
-    #
-    # @abstractmethod
-    # def _add_info_file_json(self):
-    #     pass
-    #
+    @abstractmethod
+    def read_file_json(self, path_to_file: str) -> str:
+        """ Метод чтения данных из файла (JSON). """
+        pass
+
+    @abstractmethod
+    def add_info_file_json(self, data: dict[str, str | int | float | None], path_to_file: str) -> None:
+        """ Метод добавления информации о самолете в файл (JSON). """
+        pass
+
     # @abstractmethod
     # def _delete_info_file_json(self):
     #     pass
