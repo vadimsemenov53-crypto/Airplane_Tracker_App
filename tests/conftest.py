@@ -101,26 +101,19 @@ def data_airplanes():
 
 @pytest.fixture()
 def airplane_1():
-    """ Фикстура экземпляра класса Airplane. """
+    """Фикстура экземпляра класса Airplane."""
     return Airplane("Germany", "ECA4RT", 222.98, 0.33, 13716)
 
 
 @pytest.fixture()
 def airplane_2():
-    """ Фикстура экземпляра класса Airplane. """
+    """Фикстура экземпляра класса Airplane."""
     return Airplane("Spain", "LVL2604", 309.77, 0, 11582.4)
 
 
 @pytest.fixture()
 def data_response_airplane():
-    """ Фикстура для тестов класса FileManager """
+    """Фикстура для тестов класса FileManager"""
     return [
-  {
-    "country": "Germany",
-    "callsign": "222222",
-    "velocity": 309.77,
-    "vertical_rate": 0,
-    "bar_altitude": 11582.4
-  }
-]
-
+        {"country": "Germany", "callsign": "222222", "velocity": 309.77, "vertical_rate": 0, "bar_altitude": 11582.4}
+    ]
