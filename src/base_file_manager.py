@@ -18,9 +18,10 @@ class BaseFileManagerJSON(ABC):
         """ Метод добавления информации о самолете в файл (JSON). """
         pass
 
-    # @abstractmethod
-    # def _delete_info_file_json(self):
-    #     pass
+    @abstractmethod
+    def delete_info_file_json(self, callsign: str, path_to_file: str):
+        """ Метод удаления информации о самолете по переданному позывному (callsign). """
+        pass
 
     # @abstractmethod
     # def save_to_csv_file(self):

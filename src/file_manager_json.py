@@ -53,10 +53,22 @@ class FileManagerJson(BaseFileManagerJSON):
         if not isinstance(data_file, list):
             raise TypeError("Файл должен содержать список объектов")
 
-        data_file.append(data)
+        if data not in data_file:
+            data_file.append(data)
 
         self.save_to_json_file(data_file, path_to_file)
 
+
+    def delete_info_file_json(self, callsign: str, path_to_file: str) -> None:
+        """ Метод удаления информации о самолете по переданному позывному (callsign). """
+        data_file = self.read_file_json(path_to_file)
+
+        if not isinstance(data_file, list):
+            raise TypeError("Файл должен содержать список объектов")
+
+        data_file = [air for air in data_file if air.get('callsign') != callsign]
+
+        self.save_to_json_file(data_file, path_to_file)
 
 
 if __name__ == '__main__':
@@ -72,8 +84,8 @@ if __name__ == '__main__':
                         "vertical_rate": 455,
                         "bar_altitude": 346346,
                     }]
-    print(ex_1.save_to_json_file(data, '/Users/vadimsemenov/PycharmProjects/Airplane_Tracker_App/data/example_1.json'))
+    # print(ex_1.save_to_json_file(data, '/Users/vadimsemenov/PycharmProjects/Airplane_Tracker_App/data/example_1.json'))
 
     air_1 = Airplane("Spain1111", "LVL2604", 309.77, 0, 11582.4)
-    ex_1.add_info_file_json(air_1,
+    ex_1.delete_info_file_json("LVL2604",
                             '/Users/vadimsemenov/PycharmProjects/Airplane_Tracker_App/data/example_1.json')
