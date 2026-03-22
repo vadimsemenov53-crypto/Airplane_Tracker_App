@@ -29,8 +29,8 @@ class Airplane:
         """Метод отладки, для разработчика"""
         return f"Airplane: {self.callsign}, {self.country}" f"Velocity: {self.velocity}, Bar_A: {self.bar_altitude}"
 
-    def get_dict_from_airplane(self) -> dict[str, str | int | float| None]:
-        """ Метод для формирования словаря для дальнейшего взаимодействия с данными. """
+    def get_dict_from_airplane(self) -> dict[str, str | int | float | None]:
+        """Метод для формирования словаря для дальнейшего взаимодействия с данными."""
         return {
             "country": self.country,
             "callsign": self.callsign,

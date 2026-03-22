@@ -1,26 +1,29 @@
 from abc import ABC, abstractmethod
 
+from src.airplane import Airplane
+
+
 class BaseFileManagerJSON(ABC):
-    """ Базовый класс для работы с данными о самолетах в формате JSON. """
+    """Базовый класс для работы с данными о самолетах в формате JSON."""
 
     @abstractmethod
-    def save_to_json_file(self, data: dict[str, str | int | float | None], path_to_save: str) -> None:
-        """ Метод записи переданных данных в файл (JSON). """
+    def save_to_json_file(self, data: list[dict[str, str | int | float | None]], path_to_save: str) -> None:
+        """Метод записи переданных данных в файл (JSON)."""
         pass
 
     @abstractmethod
     def read_file_json(self, path_to_file: str) -> list[dict[str, str | int | float | None]]:
-        """ Метод чтения данных из файла (JSON). """
+        """Метод чтения данных из файла (JSON)."""
         pass
 
     @abstractmethod
-    def add_info_file_json(self, data: dict[str, str | int | float | None], path_to_file: str) -> None:
-        """ Метод добавления информации о самолете в файл (JSON). """
+    def add_info_file_json(self, airplane: Airplane, path_to_file: str) -> None:
+        """Метод добавления информации о самолете в файл (JSON)."""
         pass
 
     @abstractmethod
-    def delete_info_file_json(self, callsign: str, path_to_file: str):
-        """ Метод удаления информации о самолете по переданному позывному (callsign). """
+    def delete_info_file_json(self, callsign: str, path_to_file: str) -> None:
+        """Метод удаления информации о самолете по переданному позывному (callsign)."""
         pass
 
     # @abstractmethod
