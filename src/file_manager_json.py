@@ -43,6 +43,15 @@ class FileManagerJson(BaseFileManagerJSON):
         except JSONDecodeError as e:
             raise RuntimeError(f'Ошибка JSON: {e}') from e
 
+    @staticmethod
+    def _ensure_list(data: list[dict]) -> list[dict]:
+        """ Приветный метод валидации данных.
+        Если передан список словарей -> возвращаем.
+        Иначе -> ошибка. """
+        if not isinstance(data, list):
+            raise ValueError("Файл должен содержать список объектов.")
+        return data
+
 
     def add_info_file_json(self, airplane: Airplane, path_to_file: str) -> None:
         """ Метод добавления информации о самолете в файл (JSON). """
@@ -50,8 +59,7 @@ class FileManagerJson(BaseFileManagerJSON):
 
         data_file = self.read_file_json(path_to_file)
 
-        if not isinstance(data_file, list):
-            raise TypeError("Файл должен содержать список объектов")
+        self._ensure_list(data_file)
 
         if data not in data_file:
             data_file.append(data)
@@ -63,29 +71,8 @@ class FileManagerJson(BaseFileManagerJSON):
         """ Метод удаления информации о самолете по переданному позывному (callsign). """
         data_file = self.read_file_json(path_to_file)
 
-        if not isinstance(data_file, list):
-            raise TypeError("Файл должен содержать список объектов")
+        self._ensure_list(data_file)
 
         data_file = [air for air in data_file if air.get('callsign') != callsign]
 
         self.save_to_json_file(data_file, path_to_file)
-
-
-if __name__ == '__main__':
-    path_base = os.path.dirname(os.path.dirname(__file__))
-    path_save = os.path.join(path_base, 'data/example_1.json')
-    print(path_save)
-
-    ex_1 = FileManagerJson()
-    data = [{
-                        "country": "Germany",
-                        "callsign": "ECA4RT",
-                        "velocity": 123,
-                        "vertical_rate": 455,
-                        "bar_altitude": 346346,
-                    }]
-    # print(ex_1.save_to_json_file(data, '/Users/vadimsemenov/PycharmProjects/Airplane_Tracker_App/data/example_1.json'))
-
-    air_1 = Airplane("Spain1111", "LVL2604", 309.77, 0, 11582.4)
-    ex_1.delete_info_file_json("LVL2604",
-                            '/Users/vadimsemenov/PycharmProjects/Airplane_Tracker_App/data/example_1.json')
