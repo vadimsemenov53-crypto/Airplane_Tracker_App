@@ -1,8 +1,8 @@
 import pandas as pd
 import os
 
-from src.api import APICoordinates, APIAircraft
-from src.designer_airplane import DesignerAirplane
+# from src.api import APICoordinates, APIAircraft
+# from src.designer_airplane import DesignerAirplane
 
 from src.airplane import Airplane
 from src.base_file_manager import BaseFileManagerCSV
@@ -52,24 +52,24 @@ class FileManagerCSV(BaseFileManagerCSV):
         pass
 
 
-if __name__ == "__main__":
-    path = "/Users/vadimsemenov/PycharmProjects/Airplane_Tracker_App/data/data.csv"
-
-    api_1 = APICoordinates()
-    api_1.get_response_api('Spain')
-    api_1.get_coordinates()
-
-    api_2 = APIAircraft()
-    api_2.get_response_api(api_1._coordinates)
-    print(api_2._aeroplanes)
-
-    data_air = api_2._aeroplanes
-
-    designer = DesignerAirplane(data_air)
-    report = designer._get_report()
-    print(report)
-
-    file_csv = FileManagerCSV()
-    print(file_csv.read_file_csv(path))
+# if __name__ == "__main__":
+#     path = "/Users/vadimsemenov/PycharmProjects/Airplane_Tracker_App/data/data.csv"
+#
+#     api_1 = APICoordinates()
+#     api_1.get_response_api('Spain')
+#     api_1.get_coordinates()
+#
+#     api_2 = APIAircraft()
+#     api_2.get_response_api(api_1._coordinates)
+#     print(api_2._aeroplanes)
+#
+#     data_air = api_2._aeroplanes
+#
+#     designer = DesignerAirplane(data_air)
+#     report = designer._get_report()
+#     print(report)
+#
+#     file_csv = FileManagerCSV()
+#     print(file_csv.read_file_csv(path))
 
 

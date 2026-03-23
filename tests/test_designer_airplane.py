@@ -18,12 +18,10 @@ def test_designer_airplane_get_report(data_airplanes):
     air = DesignerAirplane(data_airplanes)
     report = air._get_report()
 
-    assert report[0]["country"] == "Switzerland"
-    assert report[1]["country"] == "Germany"
-    assert "callsign" in report[0]
-    assert "velocity" in report[0]
-    assert "vertical_rate" in report[0]
-    assert "bar_altitude" in report[0]
+    assert len(report) == 3
+    assert report[0].country == 'Switzerland'
+    assert report[1].country == 'Germany'
+    assert report[2].country == 'Spain'
 
 
 def test_designer_airplane_get_report_error():
@@ -49,15 +47,15 @@ def test_designer_airplane_filtered_velocity(data_airplanes):
     assert air._data == data_airplanes
 
     air._get_report()
-    assert air._result_data[0]["velocity"] == 189.7
-    assert air._result_data[1]["velocity"] == 289.7
-    assert air._result_data[2]["velocity"] == 0.0
+    assert air._result_data[0].velocity == 189.7
+    assert air._result_data[1].velocity == 289.7
+    assert air._result_data[2].velocity == 0.0
 
     result_velocity = air._filtered_velocity()
 
-    assert result_velocity[0]["velocity"] == 289.7
-    assert result_velocity[1]["velocity"] == 189.7
-    assert result_velocity[2]["velocity"] == 0
+    assert result_velocity[0].velocity == 289.7
+    assert result_velocity[1].velocity == 189.7
+    assert result_velocity[2].velocity == 0
 
 
 def test_designer_airplane_filtered_bar(data_airplanes):
@@ -65,12 +63,12 @@ def test_designer_airplane_filtered_bar(data_airplanes):
     assert air._data == data_airplanes
 
     air._get_report()
-    assert air._result_data[0]["bar_altitude"] == 4267.2
-    assert air._result_data[1]["bar_altitude"] == 5567.2
-    assert air._result_data[2]["bar_altitude"] == 0.0
+    assert air._result_data[0].bar_altitude == 4267.2
+    assert air._result_data[1].bar_altitude == 5567.2
+    assert air._result_data[2].bar_altitude == 0.0
 
     result_velocity = air._filtered_bar_altitude()
 
-    assert result_velocity[0]["bar_altitude"] == 5567.2
-    assert result_velocity[1]["bar_altitude"] == 4267.2
-    assert result_velocity[2]["bar_altitude"] == 0
+    assert result_velocity[0].bar_altitude == 5567.2
+    assert result_velocity[1].bar_altitude == 4267.2
+    assert result_velocity[2].bar_altitude == 0
