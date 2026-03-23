@@ -2,6 +2,7 @@ import pytest
 
 from src.airplane import Airplane
 from src.airplane_json import AirplaneJSON
+from src.airplane_table import AirplaneTable
 
 
 @pytest.fixture()
@@ -122,6 +123,12 @@ def airplane_json_1():
 def airplane_json_2():
     """Фикстура экземпляра класса Airplane."""
     return AirplaneJSON("Spain", "LVL2604", 309.77, 0, 11582.4)
+
+
+@pytest.fixture()
+def airplane_table_1():
+    """Фикстура экземпляра класса Airplane."""
+    return AirplaneTable("Spain", "LVL2604", 309.77, 0, 11582.4)
 
 
 @pytest.fixture()
