@@ -112,8 +112,32 @@ def airplane_2():
 
 
 @pytest.fixture()
-def data_response_airplane():
+def airplane_3():
+    """Фикстура экземпляра класса Airplane."""
+    return Airplane("Turkey", "LVL2517", 809.77, 0, 11582.4)
+
+
+@pytest.fixture()
+def data_response_airplane(airplane_1, airplane_2):
     """Фикстура для тестов класса FileManager"""
+    return [airplane_1, airplane_2]
+
+
+@pytest.fixture()
+def data_airplane_for_read():
     return [
-        {"country": "Germany", "callsign": "222222", "velocity": 309.77, "vertical_rate": 0, "bar_altitude": 11582.4}
-    ]
+  {
+    "country": "France",
+    "callsign": "TVF96AA ",
+    "velocity": 216.58,
+    "vertical_rate": 0.33,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "France",
+    "callsign": "TVF60KN ",
+    "velocity": 144.35,
+    "vertical_rate": -2.28,
+    "bar_altitude": 2659.38
+  }
+]
