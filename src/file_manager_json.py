@@ -3,7 +3,7 @@ import os
 from json import JSONDecodeError
 from typing import cast
 
-from src.airplane import Airplane
+from src.airplane_json import AirplaneJSON
 from src.base_file_manager import BaseFileManagerJSON
 
 
@@ -56,7 +56,7 @@ class FileManagerJson(BaseFileManagerJSON):
             raise ValueError("Файл должен содержать список объектов.")
         return data
 
-    def add_info_file_json(self, airplane: Airplane, path_to_file: str) -> None:
+    def add_info_file_json(self, airplane: AirplaneJSON, path_to_file: str) -> None:
         """Метод добавления информации о самолете в файл (JSON)."""
         data = airplane.get_dict_from_airplane()
 

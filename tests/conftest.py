@@ -1,6 +1,7 @@
 import pytest
 
 from src.airplane import Airplane
+from src.airplane_json import AirplaneJSON
 
 
 @pytest.fixture()
@@ -112,7 +113,19 @@ def airplane_2():
 
 
 @pytest.fixture()
-def data_response_airplane():
+def airplane_json_1():
+    """Фикстура экземпляра класса Airplane."""
+    return AirplaneJSON("Germany", "ECA4RT", 222.98, 0.33, 13716)
+
+
+@pytest.fixture()
+def airplane_json_2():
+    """Фикстура экземпляра класса Airplane."""
+    return AirplaneJSON("Spain", "LVL2604", 309.77, 0, 11582.4)
+
+
+@pytest.fixture()
+def data_response_airplane_json():
     """Фикстура для тестов класса FileManager"""
     return [
         {"country": "Germany", "callsign": "222222", "velocity": 309.77, "vertical_rate": 0, "bar_altitude": 11582.4}

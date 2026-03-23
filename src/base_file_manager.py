@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 
 from src.airplane import Airplane
+from src.airplane_json import AirplaneJSON
 
 
 class BaseFileManagerJSON(ABC):
@@ -17,7 +18,7 @@ class BaseFileManagerJSON(ABC):
         pass
 
     @abstractmethod
-    def add_info_file_json(self, airplane: Airplane, path_to_file: str) -> None:
+    def add_info_file_json(self, airplane: AirplaneJSON, path_to_file: str) -> None:
         """Метод добавления информации о самолете в файл (JSON)."""
         pass
 
