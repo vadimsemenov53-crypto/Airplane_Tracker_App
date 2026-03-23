@@ -1,7 +1,8 @@
+import pandas as pd
+
 from abc import ABC, abstractmethod
 
 from src.airplane import Airplane
-from src.airplane_json import AirplaneJSON
 
 
 class BaseFileManagerJSON(ABC):
@@ -18,7 +19,7 @@ class BaseFileManagerJSON(ABC):
         pass
 
     @abstractmethod
-    def add_info_file_json(self, airplane: AirplaneJSON, path_to_file: str) -> None:
+    def add_info_file_json(self, airplane: Airplane, path_to_file: str) -> None:
         """Метод добавления информации о самолете в файл (JSON)."""
         pass
 
@@ -32,7 +33,7 @@ class BaseFileManagerCSV(ABC):
     """Базовый класс для работы с данными о самолетах в формате CSV."""
 
     @abstractmethod
-    def save_to_csv_file(self, data: list[dict[str, str | int | float | None]], path_to_save: str) -> None:
+    def save_to_csv_file(self, data: pd.DataFrame, path_to_save: str) -> None:
         """Метод записи переданных данных в файл (CSV)."""
         pass
 
@@ -42,7 +43,7 @@ class BaseFileManagerCSV(ABC):
         pass
 
     @abstractmethod
-    def add_info_file_csv(self, airplane: Airplane, path_to_file: str) -> None:
+    def add_info_file_csv(self, airplane: AirplaneTable, path_to_file: str) -> None:
         """Метод добавления информации о самолете в файл (CSV)."""
         pass
 

@@ -44,8 +44,8 @@ def test_airplane_magic_error(airplane_1):
     assert airplane_1.__ne__({"Bar": 2222}) == NotImplemented
 
 
-def test_airplane_get_dict(airplane_json_1):
-    assert airplane_json_1.get_dict_from_airplane() == {
+def test_airplane_get_dict(airplane_1):
+    assert airplane_1.get_dict_from_airplane() == {
         "country": "Germany",
         "callsign": "ECA4RT",
         "velocity": 222.98,

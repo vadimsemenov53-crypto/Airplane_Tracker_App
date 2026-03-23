@@ -29,6 +29,16 @@ class Airplane:
         """Метод отладки, для разработчика"""
         return f"Airplane: {self.callsign}, {self.country}" f"Velocity: {self.velocity}, Bar_A: {self.bar_altitude}"
 
+    def get_dict_from_airplane(self) -> dict[str, str | int | float | None]:
+        """Метод для формирования словаря для дальнейшего взаимодействия с данными."""
+        return {
+            "country": self.country,
+            "callsign": self.callsign,
+            "velocity": self.velocity,
+            "vertical_rate": self.vertical_rate,
+            "bar_altitude": self.bar_altitude,
+        }
+
     def __lt__(self, other: "Airplane") -> bool:
         """Метод сравнения высот двух самолетов (Air_1 < Air_2)."""
         return self.bar_altitude < other.bar_altitude
