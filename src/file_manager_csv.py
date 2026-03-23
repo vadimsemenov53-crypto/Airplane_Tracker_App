@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-from src.airplane_table import AirplaneTable
+from src.airplane import Airplane
 from src.base_file_manager import BaseFileManagerCSV
 
 
@@ -14,9 +14,9 @@ class FileManagerCSV(BaseFileManagerCSV):
     4. Удаление данных о самолете из файла (требуется передать путь до файла и
     передать словарь с критериями.)"""
 
-    def save_to_csv_file(self, data: pd.DataFrame, path_to_save: str) -> None:
+    def save_to_csv_file(self, airplanes: list[Airplane], path_to_save: str) -> None:
         """Метод записи переданных данных в файл (CSV)."""
-        if not data:
+        if not airplanes:
             raise ValueError("Переданы пустые данные.")
 
         if os.path.isdir(path_to_save):
@@ -24,17 +24,23 @@ class FileManagerCSV(BaseFileManagerCSV):
 
         os.makedirs(os.path.dirname(path_to_save), exist_ok=True)
 
+        df = pd.DataFrame([air.get_dict_from_airplane() for air in airplanes])
+
         try:
-            data.to_csv(path_to_save, index=False, encoding="utf-8", sep=",")
+            df.to_csv(path_to_save, index=False)
 
         except OSError as e:
             raise RuntimeError(f"Ошибка записи: {e}") from e
 
     def read_file_csv(self, path_to_file: str) -> list[dict[str, str | int | float | None]]:
         """Метод чтения данных из файла (CSV)."""
-        pass
+        if not os.path.exists(path):
+            raise FileNotFoundError(f"Файл не найден: {path}")
 
-    def add_info_file_csv(self, airplane: AirplaneTable, path_to_file: str) -> None:
+        df = pd.read_csv(path_to_file)
+        return df.to_dict(orient='records')
+
+    def add_info_file_csv(self, airplane: Airplane, path_to_file: str) -> None:
         """Метод добавления информации о самолете в файл (CSV)."""
         pass
 
@@ -46,12 +52,12 @@ class FileManagerCSV(BaseFileManagerCSV):
 if __name__ == "__main__":
     path_dir_data = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
     print(path_dir_data)
-    airplane = AirplaneTable('Germany', '2222', 222, 33, 5555)
-    data_1 = airplane.get_table_from_airplane()
+    airplane1 = Airplane('Germany', '2222', 222, 33, 5555)
+    airplane2 = Airplane('Germany', '2222', 222, 33, 5555)
+    data_1 = [airplane1, airplane2]
 
-    path = "/Users/vadimsemenov/PycharmProjects/Airplane_Tracker_App/data"
+    path = "/Users/vadimsemenov/PycharmProjects/Airplane_Tracker_App/data/data.csv"
 
-    air = FileManagerCSV()
+    air11 = FileManagerCSV()
 
-
-    air.save_to_csv_file(data_1, path)
+    print(air11.read_file_csv(path))
