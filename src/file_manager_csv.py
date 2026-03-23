@@ -70,6 +70,6 @@ if __name__ == "__main__":
     print(report)
 
     file_csv = FileManagerCSV()
-    file_csv.save_to_csv_file(report, path)
+    print(file_csv.read_file_csv(path))
 
 

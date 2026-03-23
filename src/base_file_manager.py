@@ -9,7 +9,7 @@ class BaseFileManagerJSON(ABC):
     """Базовый класс для работы с данными о самолетах в формате JSON."""
 
     @abstractmethod
-    def save_to_json_file(self, data: list[dict[str, str | int | float | None]], path_to_save: str) -> None:
+    def save_to_json_file(self, airplanes: list[Airplane], path_to_save: str) -> None:
         """Метод записи переданных данных в файл (JSON)."""
         pass
 
@@ -19,7 +19,7 @@ class BaseFileManagerJSON(ABC):
         pass
 
     @abstractmethod
-    def add_info_file_json(self, airplane: Airplane, path_to_file: str) -> None:
+    def add_info_file_json(self, airplanes: list[Airplane], path_to_file: str) -> None:
         """Метод добавления информации о самолете в файл (JSON)."""
         pass
 
