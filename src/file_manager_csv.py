@@ -1,6 +1,9 @@
 import pandas as pd
 import os
 
+from src.api import APICoordinates, APIAircraft
+from src.designer_airplane import DesignerAirplane
+
 from src.airplane import Airplane
 from src.base_file_manager import BaseFileManagerCSV
 
@@ -50,14 +53,23 @@ class FileManagerCSV(BaseFileManagerCSV):
 
 
 if __name__ == "__main__":
-    path_dir_data = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
-    print(path_dir_data)
-    airplane1 = Airplane('Germany', '2222', 222, 33, 5555)
-    airplane2 = Airplane('Germany', '2222', 222, 33, 5555)
-    data_1 = [airplane1, airplane2]
-
     path = "/Users/vadimsemenov/PycharmProjects/Airplane_Tracker_App/data/data.csv"
 
-    air11 = FileManagerCSV()
+    api_1 = APICoordinates()
+    api_1.get_response_api('Spain')
+    api_1.get_coordinates()
 
-    print(air11.read_file_csv(path))
+    api_2 = APIAircraft()
+    api_2.get_response_api(api_1._coordinates)
+    print(api_2._aeroplanes)
+
+    data_air = api_2._aeroplanes
+
+    designer = DesignerAirplane(data_air)
+    report = designer._get_report()
+    print(report)
+
+    file_csv = FileManagerCSV()
+    file_csv.save_to_csv_file(report, path)
+
+
