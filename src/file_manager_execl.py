@@ -1,0 +1,68 @@
+import os
+
+import pandas as pd
+
+from src.airplane import Airplane
+from src.base_file_manager import BaseFileManagerEXCEL
+
+class FileManagerEXCEL(BaseFileManagerEXCEL):
+    """Класс для работы с данными в формате EXCEL.
+    Основные функции:
+    1. Запись переданных данных в файл (требуется передать путь для записи файла).
+    2. Чтение данных файла (требуется передать путь).
+    3. Добавление данных в файл (требуется передать путь до файла и данные о самолете).
+    4. Удаление данных о самолете из файла (требуется передать путь до файла и
+    передать словарь с критериями.)"""
+
+    def save_to_excel_file(self, airplanes: list[Airplane], path_to_save: str) -> None:
+        """Метод записи переданных данных в файл (EXCEL)."""
+        if not airplanes:
+            raise ValueError("Переданы пустые данные.")
+
+        if os.path.isdir(path_to_save):
+            path_to_save = os.path.join(path_to_save, "data.csv")
+
+        os.makedirs(os.path.dirname(path_to_save), exist_ok=True)
+
+        df = pd.DataFrame([air.get_dict_from_airplane() for air in airplanes])
+
+        try:
+            df.to_excel(path_to_save, index=False)
+
+        except OSError as e:
+            raise RuntimeError(f"Ошибка записи: {e}") from e
+
+    def read_file_excel(self, path_to_file: str) -> pd.DataFrame:
+        """Метод чтения данных из файла (EXCEL)."""
+        if not os.path.exists(path_to_file):
+            raise FileNotFoundError(f"Файл не найден: {path_to_file}")
+
+        return pd.read_excel(path_to_file)
+
+    def add_info_file_excel(self, airplane: list[Airplane], path_to_file: str) -> None:
+        """Метод добавления информации о самолете в файл (CSV)."""
+        new_df = pd.DataFrame([air.get_dict_from_airplane() for air in airplane])
+
+        df = self.read_file_excel(path_to_file)
+
+        combined_df = pd.concat([df, new_df], ignore_index=True)
+        combined_df = combined_df.drop_duplicates()
+
+        try:
+            combined_df.to_excel(path_to_file, index=False)
+
+        except OSError as e:
+            raise RuntimeError(f"Ошибка записи: {e}") from e
+
+
+    def delete_info_file_excel(self, callsign: str, path_to_file: str) -> None:
+        """Метод удаления информации о самолете по переданному позывному (callsign)."""
+        df = self.read_file_excel(path_to_file)
+
+        df = df[df["callsign"] != callsign]
+
+        try:
+            df.to_excel(path_to_file, index=False)
+
+        except OSError as e:
+            raise RuntimeError(f"Ошибка записи: {e}") from e

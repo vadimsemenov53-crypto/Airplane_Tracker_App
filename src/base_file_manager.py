@@ -52,25 +52,26 @@ class BaseFileManagerCSV(ABC):
         """Метод удаления информации о самолете по переданному позывному (callsign)."""
         pass
 
-class BaseFileManagerEXECL(ABC):
-        """Базовый класс для работы с данными о самолетах в формате EXECL."""
+
+class BaseFileManagerEXCEL(ABC):
+        """Базовый класс для работы с данными о самолетах в формате EXCEL."""
 
         @abstractmethod
-        def save_to_execl_file(self, airplanes: list[Airplane], path_to_save: str) -> None:
-            """Метод записи переданных данных в файл (EXECL)."""
+        def save_to_excel_file(self, airplanes: list[Airplane], path_to_save: str) -> None:
+            """Метод записи переданных данных в файл (EXCEL)."""
             pass
 
         @abstractmethod
-        def read_file_execl(self, path_to_file: str) -> pd.DataFrame:
-            """Метод чтения данных из файла (EXECL)."""
+        def read_file_excel(self, path_to_file: str) -> pd.DataFrame:
+            """Метод чтения данных из файла (EXCEL)."""
             pass
 
         @abstractmethod
-        def add_info_file_execl(self, airplane: list[Airplane], path_to_file: str) -> None:
-            """Метод добавления информации о самолете в файл (EXECL)."""
+        def add_info_file_excel(self, airplane: list[Airplane], path_to_file: str) -> None:
+            """Метод добавления информации о самолете в файл (EXCEL)."""
             pass
 
         @abstractmethod
-        def delete_info_file_execl(self, callsign: str, path_to_file: str) -> None:
+        def delete_info_file_excel(self, callsign: str, path_to_file: str) -> None:
             """Метод удаления информации о самолете по переданному позывному (callsign)."""
             pass
