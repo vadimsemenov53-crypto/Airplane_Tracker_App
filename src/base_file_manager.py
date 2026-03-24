@@ -10,7 +10,7 @@ class BaseFileManagerJSON(ABC):
 
     def __init__(self, filename: str = "data.json") -> None:
         """ Метод инициализации с приватным атрибутом __filename """
-        self.__filename = filename
+        self._filename = filename
 
     @abstractmethod
     def save_to_json_file(self, airplanes: list[Airplane], path_to_save: str) -> None:

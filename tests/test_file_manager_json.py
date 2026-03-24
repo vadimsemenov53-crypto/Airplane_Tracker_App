@@ -3,8 +3,36 @@ from json import JSONDecodeError
 from unittest.mock import patch
 
 import pytest
+import os
 
 from src.file_manager_json import FileManagerJson
+
+def test_manager_json_init():
+    file_1 = FileManagerJson()
+    file_2 = FileManagerJson('report.json')
+
+    assert file_1._filename == 'data.json'
+    assert file_2._filename == 'report.json'
+
+
+def test_manager_json_save_path(tmp_path, data_response_airplane):
+    path_to_file_1 = tmp_path / "data.json"
+    file_1 = FileManagerJson()
+    file_1.save_to_json_file(data_response_airplane, str(path_to_file_1))
+
+    assert path_to_file_1.exists()
+
+
+@patch("os.makedirs")
+@patch("builtins.open")
+def test_manager_json_save_base_path(mock_open, mock_dir, data_response_airplane):
+    file = FileManagerJson()
+    file.save_to_json_file(data_response_airplane, path_to_save=None)
+
+    mock_dir.assert_called_once()
+
+    args, kwargs = mock_open.call_args
+    assert 'Airplane_Tracker_App/data/data.json' in args[0]
 
 
 def test_manager_json_save(tmp_path, data_response_airplane):

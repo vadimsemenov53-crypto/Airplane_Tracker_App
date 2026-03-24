@@ -16,13 +16,17 @@ class FileManagerJson(BaseFileManagerJSON):
     4. Удаление данных о самолете из файла (требуется передать путь до файла и
     передать словарь с критериями.)"""
 
-    def save_to_json_file(self, airplanes: list[Airplane], path_to_save: str) -> None:
+    def save_to_json_file(self, airplanes: list[Airplane], path_to_save: str | None = None) -> None:
         """Метод записи переданных данных в файл (JSON)."""
         if not airplanes:
             raise ValueError("Переданы пустые данные.")
 
+        if not path_to_save:
+            data_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
+            path_to_save = os.path.join(data_dir, self._filename)
+
         if os.path.isdir(path_to_save):
-            path_to_save = os.path.join(path_to_save, "data.json")
+            path_to_save = os.path.join(path_to_save, self._filename)
 
         os.makedirs(os.path.dirname(path_to_save), exist_ok=True)
 
