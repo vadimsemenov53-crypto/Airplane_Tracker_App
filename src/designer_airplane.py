@@ -1,5 +1,5 @@
-from src.base_designer_airplane import BaseDesignerAirplane
 from src.airplane import Airplane
+from src.base_designer_airplane import BaseDesignerAirplane
 
 
 class DesignerAirplane(BaseDesignerAirplane):

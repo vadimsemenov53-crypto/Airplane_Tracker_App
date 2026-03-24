@@ -1,11 +1,12 @@
-import pandas as pd
 import os
 
-# from src.api import APICoordinates, APIAircraft
-# from src.designer_airplane import DesignerAirplane
+import pandas as pd
 
 from src.airplane import Airplane
 from src.base_file_manager import BaseFileManagerCSV
+
+# from src.api import APICoordinates, APIAircraft
+# from src.designer_airplane import DesignerAirplane
 
 
 class FileManagerCSV(BaseFileManagerCSV):
@@ -37,11 +38,11 @@ class FileManagerCSV(BaseFileManagerCSV):
 
     def read_file_csv(self, path_to_file: str) -> list[dict[str, str | int | float | None]]:
         """Метод чтения данных из файла (CSV)."""
-        if not os.path.exists(path):
-            raise FileNotFoundError(f"Файл не найден: {path}")
+        if not os.path.exists(path_to_file):
+            raise FileNotFoundError(f"Файл не найден: {path_to_file}")
 
         df = pd.read_csv(path_to_file)
-        return df.to_dict(orient='records')
+        return df.to_dict(orient="records")
 
     def add_info_file_csv(self, airplane: Airplane, path_to_file: str) -> None:
         """Метод добавления информации о самолете в файл (CSV)."""
@@ -71,5 +72,3 @@ class FileManagerCSV(BaseFileManagerCSV):
 #
 #     file_csv = FileManagerCSV()
 #     print(file_csv.read_file_csv(path))
-
-

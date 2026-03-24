@@ -1,5 +1,3 @@
-import pandas as pd
-
 from abc import ABC, abstractmethod
 
 from src.airplane import Airplane
@@ -33,7 +31,7 @@ class BaseFileManagerCSV(ABC):
     """Базовый класс для работы с данными о самолетах в формате CSV."""
 
     @abstractmethod
-    def save_to_csv_file(self, data: pd.DataFrame, path_to_save: str) -> None:
+    def save_to_csv_file(self, airplanes: list[Airplane], path_to_save: str) -> None:
         """Метод записи переданных данных в файл (CSV)."""
         pass
 

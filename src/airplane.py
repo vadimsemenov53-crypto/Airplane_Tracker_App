@@ -3,7 +3,9 @@ class Airplane:
 
     __slots__ = ("country", "callsign", "velocity", "vertical_rate", "bar_altitude")
 
-    def __init__(self, country: str, callsign: str, velocity: float, vertical_rate: float, bar_altitude: float):
+    def __init__(
+        self, country: str, callsign: str, velocity: int | float, vertical_rate: int | float, bar_altitude: int | float
+    ):
         """Метод - конструктор, для инициализации объектов класса."""
         self.country = country
         self.callsign = callsign
