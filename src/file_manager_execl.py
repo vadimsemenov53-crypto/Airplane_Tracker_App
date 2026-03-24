@@ -6,7 +6,7 @@ from src.airplane import Airplane
 from src.base_file_manager import BaseFileManagerEXCEL
 
 class FileManagerEXCEL(BaseFileManagerEXCEL):
-    """Класс для работы с данными в формате EXCEL.
+    """Класс для работы с данными в формате xlsx.
     Основные функции:
     1. Запись переданных данных в файл (требуется передать путь для записи файла).
     2. Чтение данных файла (требуется передать путь).
@@ -20,7 +20,7 @@ class FileManagerEXCEL(BaseFileManagerEXCEL):
             raise ValueError("Переданы пустые данные.")
 
         if os.path.isdir(path_to_save):
-            path_to_save = os.path.join(path_to_save, "data.csv")
+            path_to_save = os.path.join(path_to_save, "data.xlsx")
 
         os.makedirs(os.path.dirname(path_to_save), exist_ok=True)
 
@@ -40,7 +40,7 @@ class FileManagerEXCEL(BaseFileManagerEXCEL):
         return pd.read_excel(path_to_file)
 
     def add_info_file_excel(self, airplane: list[Airplane], path_to_file: str) -> None:
-        """Метод добавления информации о самолете в файл (CSV)."""
+        """Метод добавления информации о самолете в файл (EXCEL)."""
         new_df = pd.DataFrame([air.get_dict_from_airplane() for air in airplane])
 
         df = self.read_file_excel(path_to_file)
