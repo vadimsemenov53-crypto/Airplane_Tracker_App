@@ -5,6 +5,7 @@ import pytest
 
 from src.file_manager_excel import FileManagerEXCEL
 
+
 def test_file_manager_exec_save(tmp_path, data_response_airplane):
     path = tmp_path / "data.xlsx"
 

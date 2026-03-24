@@ -5,6 +5,7 @@ import pandas as pd
 from src.airplane import Airplane
 from src.base_file_manager import BaseFileManagerEXCEL
 
+
 class FileManagerEXCEL(BaseFileManagerEXCEL):
     """Класс для работы с данными в формате xlsx.
     Основные функции:
@@ -53,7 +54,6 @@ class FileManagerEXCEL(BaseFileManagerEXCEL):
 
         except OSError as e:
             raise RuntimeError(f"Ошибка записи: {e}") from e
-
 
     def delete_info_file_excel(self, callsign: str, path_to_file: str) -> None:
         """Метод удаления информации о самолете по переданному позывному (callsign)."""
