@@ -52,10 +52,25 @@ class BaseFileManagerCSV(ABC):
         """Метод удаления информации о самолете по переданному позывному (callsign)."""
         pass
 
-    # @abstractmethod
-    # def save_to_csv_file(self):
-    #     pass
-    #
-    # @abstractmethod
-    # def save_to_execl_file(self):
-    #     pass
+class BaseFileManagerEXECL(ABC):
+        """Базовый класс для работы с данными о самолетах в формате EXECL."""
+
+        @abstractmethod
+        def save_to_execl_file(self, airplanes: list[Airplane], path_to_save: str) -> None:
+            """Метод записи переданных данных в файл (EXECL)."""
+            pass
+
+        @abstractmethod
+        def read_file_execl(self, path_to_file: str) -> pd.DataFrame:
+            """Метод чтения данных из файла (EXECL)."""
+            pass
+
+        @abstractmethod
+        def add_info_file_execl(self, airplane: list[Airplane], path_to_file: str) -> None:
+            """Метод добавления информации о самолете в файл (EXECL)."""
+            pass
+
+        @abstractmethod
+        def delete_info_file_execl(self, callsign: str, path_to_file: str) -> None:
+            """Метод удаления информации о самолете по переданному позывному (callsign)."""
+            pass
