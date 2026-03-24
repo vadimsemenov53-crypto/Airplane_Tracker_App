@@ -19,9 +19,9 @@ def test_designer_airplane_get_report(data_airplanes):
     report = air._get_report()
 
     assert len(report) == 3
-    assert report[0].country == 'Switzerland'
-    assert report[1].country == 'Germany'
-    assert report[2].country == 'Spain'
+    assert report[0].country == "Switzerland"
+    assert report[1].country == "Germany"
+    assert report[2].country == "Spain"
 
 
 def test_designer_airplane_get_report_error():

@@ -1,6 +1,7 @@
 import pytest
 
 from src.airplane import Airplane
+from src.file_manager_csv import FileManagerCSV
 
 
 @pytest.fixture()
@@ -126,18 +127,28 @@ def data_response_airplane(airplane_1, airplane_2):
 @pytest.fixture()
 def data_airplane_for_read():
     return [
-  {
-    "country": "France",
-    "callsign": "TVF96AA ",
-    "velocity": 216.58,
-    "vertical_rate": 0.33,
-    "bar_altitude": 11582.4
-  },
-  {
-    "country": "France",
-    "callsign": "TVF60KN ",
-    "velocity": 144.35,
-    "vertical_rate": -2.28,
-    "bar_altitude": 2659.38
-  }
-]
+        {
+            "country": "France",
+            "callsign": "TVF96AA ",
+            "velocity": 216.58,
+            "vertical_rate": 0.33,
+            "bar_altitude": 11582.4,
+        },
+        {
+            "country": "France",
+            "callsign": "TVF60KN ",
+            "velocity": 144.35,
+            "vertical_rate": -2.28,
+            "bar_altitude": 2659.38,
+        },
+    ]
+
+
+@pytest.fixture()
+def file_csv_saves(tmp_path, data_response_airplane):
+    path = tmp_path / "data.csv"
+
+    file = FileManagerCSV()
+    file.save_to_csv_file(data_response_airplane, str(path))
+
+    return file
