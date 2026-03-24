@@ -5,8 +5,8 @@ import pandas as pd
 from src.airplane import Airplane
 from src.base_file_manager import BaseFileManagerEXCEL
 
-from src.api import APICoordinates, APIAircraft
-from src.designer_airplane import DesignerAirplane
+# from src.api import APICoordinates, APIAircraft
+# from src.designer_airplane import DesignerAirplane
 
 
 class FileManagerEXCEL(BaseFileManagerEXCEL):
@@ -71,25 +71,25 @@ class FileManagerEXCEL(BaseFileManagerEXCEL):
             raise RuntimeError(f"Ошибка записи: {e}") from e
 
 
-if __name__ == "__main__":
-    path = "/Users/vadimsemenov/PycharmProjects/Airplane_Tracker_App/data/data.xlsx"
-
-    api_1 = APICoordinates()
-    api_1.get_response_api('Spain')
-    api_1.get_coordinates()
-
-    api_2 = APIAircraft()
-    api_2.get_response_api(api_1._coordinates)
-    print(api_2._aeroplanes)
-
-    data_air = api_2._aeroplanes
-
-    designer = DesignerAirplane(data_air)
-    report = designer._get_report()
-    report_filter_bar = designer._filtered_bar_altitude()
-    print(report)
-    print(report_filter_bar)
-
-    file_excel = FileManagerEXCEL()
-    file_excel.save_to_excel_file(report_filter_bar, path)
+# if __name__ == "__main__":
+#     path = "/Users/vadimsemenov/PycharmProjects/Airplane_Tracker_App/data/data.xlsx"
+#
+#     api_1 = APICoordinates()
+#     api_1.get_response_api('Spain')
+#     api_1.get_coordinates()
+#
+#     api_2 = APIAircraft()
+#     api_2.get_response_api(api_1._coordinates)
+#     print(api_2._aeroplanes)
+#
+#     data_air = api_2._aeroplanes
+#
+#     designer = DesignerAirplane(data_air)
+#     report = designer._get_report()
+#     report_filter_bar = designer._filtered_bar_altitude()
+#     print(report)
+#     print(report_filter_bar)
+#
+#     file_excel = FileManagerEXCEL()
+#     file_excel.save_to_excel_file(report_filter_bar, path)
 

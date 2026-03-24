@@ -8,6 +8,10 @@ from src.airplane import Airplane
 class BaseFileManagerJSON(ABC):
     """Базовый класс для работы с данными о самолетах в формате JSON."""
 
+    def __init__(self, filename: str = "data.json") -> None:
+        """ Метод инициализации с приватным атрибутом __filename """
+        self.__filename = filename
+
     @abstractmethod
     def save_to_json_file(self, airplanes: list[Airplane], path_to_save: str) -> None:
         """Метод записи переданных данных в файл (JSON)."""
@@ -32,6 +36,10 @@ class BaseFileManagerJSON(ABC):
 class BaseFileManagerCSV(ABC):
     """Базовый класс для работы с данными о самолетах в формате CSV."""
 
+    def __init__(self, filename: str = "data.csv") -> None:
+        """ Метод инициализации с приватным атрибутом __filename """
+        self.__filename = filename
+
     @abstractmethod
     def save_to_csv_file(self, airplanes: list[Airplane], path_to_save: str) -> None:
         """Метод записи переданных данных в файл (CSV)."""
@@ -55,6 +63,10 @@ class BaseFileManagerCSV(ABC):
 
 class BaseFileManagerEXCEL(ABC):
     """Базовый класс для работы с данными о самолетах в формате EXCEL."""
+
+    def __init__(self, filename: str = "data.xlsx") -> None:
+        """ Метод инициализации с приватным атрибутом __filename """
+        self.__filename = filename
 
     @abstractmethod
     def save_to_excel_file(self, airplanes: list[Airplane], path_to_save: str) -> None:
