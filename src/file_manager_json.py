@@ -51,7 +51,7 @@ class FileManagerJson(BaseFileManagerJSON):
 
     @staticmethod
     def _ensure_list(data: list[dict]) -> list[dict]:
-        """Приветный метод валидации данных.
+        """Приватный метод валидации данных.
         Если передан список словарей -> возвращаем.
         Иначе -> ошибка."""
         if not isinstance(data, list):

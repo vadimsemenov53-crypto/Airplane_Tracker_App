@@ -36,21 +36,39 @@ class FileManagerCSV(BaseFileManagerCSV):
         except OSError as e:
             raise RuntimeError(f"Ошибка записи: {e}") from e
 
-    def read_file_csv(self, path_to_file: str) -> list[dict[str, str | int | float | None]]:
+    def read_file_csv(self, path_to_file: str) -> pd.DataFrame:
         """Метод чтения данных из файла (CSV)."""
         if not os.path.exists(path_to_file):
             raise FileNotFoundError(f"Файл не найден: {path_to_file}")
 
-        df = pd.read_csv(path_to_file)
-        return df.to_dict(orient="records")
+        return pd.read_csv(path_to_file)
 
-    def add_info_file_csv(self, airplane: Airplane, path_to_file: str) -> None:
+    def add_info_file_csv(self, airplane: list[Airplane], path_to_file: str) -> None:
         """Метод добавления информации о самолете в файл (CSV)."""
-        pass
+        new_df = pd.DataFrame([air.get_dict_from_airplane() for air in airplane])
+
+        df = self.read_file_csv(path_to_file)
+
+        combined_df = pd.concat([df, new_df], ignore_index=True)
+        combined_df = combined_df.drop_duplicates()
+
+        try:
+            combined_df.to_csv(path_to_file, index=False)
+
+        except OSError as e:
+            raise RuntimeError(f"Ошибка записи: {e}") from e
 
     def delete_info_file_csv(self, callsign: str, path_to_file: str) -> None:
         """Метод удаления информации о самолете по переданному позывному (callsign)."""
-        pass
+        df = self.read_file_csv(path_to_file)
+
+        df = df[df["callsign"] != callsign]
+
+        try:
+            df.to_csv(path_to_file, index=False)
+
+        except OSError as e:
+            raise RuntimeError(f"Ошибка записи: {e}") from e
 
 
 # if __name__ == "__main__":

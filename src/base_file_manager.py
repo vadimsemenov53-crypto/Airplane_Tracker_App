@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
 
+import pandas as pd
+
 from src.airplane import Airplane
 
 
@@ -36,12 +38,12 @@ class BaseFileManagerCSV(ABC):
         pass
 
     @abstractmethod
-    def read_file_csv(self, path_to_file: str) -> list[dict[str, str | int | float | None]]:
+    def read_file_csv(self, path_to_file: str) -> pd.DataFrame:
         """Метод чтения данных из файла (CSV)."""
         pass
 
     @abstractmethod
-    def add_info_file_csv(self, airplane: Airplane, path_to_file: str) -> None:
+    def add_info_file_csv(self, airplane: list[Airplane], path_to_file: str) -> None:
         """Метод добавления информации о самолете в файл (CSV)."""
         pass
 
