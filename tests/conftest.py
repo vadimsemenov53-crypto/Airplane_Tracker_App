@@ -2,6 +2,7 @@ import pytest
 
 from src.airplane import Airplane
 from src.file_manager_csv import FileManagerCSV
+from src.file_manager_excel import FileManagerEXCEL
 
 
 @pytest.fixture()
@@ -150,5 +151,15 @@ def file_csv_saves(tmp_path, data_response_airplane):
 
     file = FileManagerCSV()
     file.save_to_csv_file(data_response_airplane, str(path))
+
+    return file
+
+
+@pytest.fixture()
+def file_excel_saves(tmp_path, data_response_airplane):
+    path = tmp_path / "data.xlsx"
+
+    file = FileManagerEXCEL()
+    file.save_to_excel_file(data_response_airplane, str(path))
 
     return file
