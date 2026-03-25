@@ -3,7 +3,6 @@ from json import JSONDecodeError
 from unittest.mock import patch
 
 import pytest
-import os
 
 from src.file_manager_json import FileManagerJson
 

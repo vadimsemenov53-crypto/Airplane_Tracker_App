@@ -5,6 +5,33 @@ import pytest
 
 from src.file_manager_csv import FileManagerCSV
 
+def test_file_manager_csv_init():
+    file_1 = FileManagerCSV()
+    file_2 = FileManagerCSV("report.csv")
+
+    assert file_1._filename == 'data.csv'
+    assert file_2._filename == 'report.csv'
+
+
+def test_file_manager_csv_save_path(tmp_path, data_response_airplane):
+    path_to_file_1 = tmp_path / "data.json"
+    file_1 = FileManagerCSV()
+    file_1.save_to_csv_file(data_response_airplane, str(path_to_file_1))
+
+    assert path_to_file_1.exists()
+
+
+@patch("os.makedirs")
+@patch("pandas.DataFrame.to_csv")
+def test_manager_json_save_base_path(mock_csv, mock_dir, data_response_airplane):
+    file = FileManagerCSV()
+    file.save_to_csv_file(data_response_airplane, path_to_save=None)
+
+    mock_dir.assert_called_once()
+
+    args, kwargs = mock_csv.call_args
+    assert 'Airplane_Tracker_App/data/data.csv' in args[0]
+
 
 def test_file_manager_csv_save(tmp_path, data_response_airplane):
     path = tmp_path / "data.csv"
