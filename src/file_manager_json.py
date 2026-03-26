@@ -5,6 +5,7 @@ from typing import cast
 
 from src.airplane import Airplane
 from src.base_file_manager import BaseFileManagerJSON
+from src.utils import airplanes_to_dicts
 
 
 class FileManagerJson(BaseFileManagerJSON):
@@ -30,7 +31,7 @@ class FileManagerJson(BaseFileManagerJSON):
 
         os.makedirs(os.path.dirname(path_to_save), exist_ok=True)
 
-        data = [air.get_dict_from_airplane() for air in airplanes]
+        data = airplanes_to_dicts(airplanes)
 
         try:
             with open(path_to_save, "w", encoding="utf-8") as file:
@@ -64,7 +65,7 @@ class FileManagerJson(BaseFileManagerJSON):
 
     def add_info_file_json(self, airplanes: list[Airplane], path_to_file: str) -> None:
         """Метод добавления информации о самолете в файл (JSON)."""
-        new_data = [air.get_dict_from_airplane() for air in airplanes]
+        new_data = airplanes_to_dicts(airplanes)
 
         data_file = self.read_file_json(path_to_file)
 

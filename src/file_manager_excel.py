@@ -4,6 +4,7 @@ import pandas as pd
 
 from src.airplane import Airplane
 from src.base_file_manager import BaseFileManagerEXCEL
+from src.utils import airplanes_to_dicts
 
 # from src.api import APICoordinates, APIAircraft
 # from src.designer_airplane import DesignerAirplane
@@ -32,7 +33,7 @@ class FileManagerEXCEL(BaseFileManagerEXCEL):
 
         os.makedirs(os.path.dirname(path_to_save), exist_ok=True)
 
-        df = pd.DataFrame([air.get_dict_from_airplane() for air in airplanes])
+        df = pd.DataFrame(airplanes_to_dicts(airplanes))
 
         try:
             df.to_excel(path_to_save, index=False)
@@ -49,7 +50,7 @@ class FileManagerEXCEL(BaseFileManagerEXCEL):
 
     def add_info_file_excel(self, airplane: list[Airplane], path_to_file: str) -> None:
         """Метод добавления информации о самолете в файл (EXCEL)."""
-        new_df = pd.DataFrame([air.get_dict_from_airplane() for air in airplane])
+        new_df = pd.DataFrame(airplanes_to_dicts(airplane))
 
         df = self.read_file_excel(path_to_file)
 
