@@ -9,11 +9,11 @@ class BaseFileManagerJSON(ABC):
     """Базовый класс для работы с данными о самолетах в формате JSON."""
 
     def __init__(self, filename: str = "data.json") -> None:
-        """ Метод инициализации с приватным атрибутом __filename """
+        """Метод инициализации с приватным атрибутом __filename"""
         self._filename = filename
 
     @abstractmethod
-    def save_to_json_file(self, airplanes: list[Airplane], path_to_save: str) -> None:
+    def save_to_json_file(self, airplanes: list[Airplane], path_to_save: str | None = None) -> None:
         """Метод записи переданных данных в файл (JSON)."""
         pass
 
@@ -37,11 +37,11 @@ class BaseFileManagerCSV(ABC):
     """Базовый класс для работы с данными о самолетах в формате CSV."""
 
     def __init__(self, filename: str = "data.csv") -> None:
-        """ Метод инициализации с приватным атрибутом _filename """
+        """Метод инициализации с приватным атрибутом _filename"""
         self._filename = filename
 
     @abstractmethod
-    def save_to_csv_file(self, airplanes: list[Airplane], path_to_save: str) -> None:
+    def save_to_csv_file(self, airplanes: list[Airplane], path_to_save: str | None = None) -> None:
         """Метод записи переданных данных в файл (CSV)."""
         pass
 
@@ -65,11 +65,11 @@ class BaseFileManagerEXCEL(ABC):
     """Базовый класс для работы с данными о самолетах в формате EXCEL."""
 
     def __init__(self, filename: str = "data.xlsx") -> None:
-        """ Метод инициализации с приватным атрибутом _filename """
+        """Метод инициализации с приватным атрибутом _filename"""
         self._filename = filename
 
     @abstractmethod
-    def save_to_excel_file(self, airplanes: list[Airplane], path_to_save: str) -> None:
+    def save_to_excel_file(self, airplanes: list[Airplane], path_to_save: str | None = None) -> None:
         """Метод записи переданных данных в файл (EXCEL)."""
         pass
 

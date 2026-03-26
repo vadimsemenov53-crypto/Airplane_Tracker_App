@@ -6,12 +6,13 @@ import pytest
 
 from src.file_manager_json import FileManagerJson
 
+
 def test_manager_json_init():
     file_1 = FileManagerJson()
-    file_2 = FileManagerJson('report.json')
+    file_2 = FileManagerJson("report.json")
 
-    assert file_1._filename == 'data.json'
-    assert file_2._filename == 'report.json'
+    assert file_1._filename == "data.json"
+    assert file_2._filename == "report.json"
 
 
 def test_manager_json_save_path(tmp_path, data_response_airplane):
@@ -31,7 +32,7 @@ def test_manager_json_save_base_path(mock_open, mock_dir, data_response_airplane
     mock_dir.assert_called_once()
 
     args, kwargs = mock_open.call_args
-    assert 'Airplane_Tracker_App/data/data.json' in args[0]
+    assert "Airplane_Tracker_App/data/data.json" in args[0]
 
 
 def test_manager_json_save(tmp_path, data_response_airplane):

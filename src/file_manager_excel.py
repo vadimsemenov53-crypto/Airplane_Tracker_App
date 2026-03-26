@@ -96,4 +96,3 @@ class FileManagerEXCEL(BaseFileManagerEXCEL):
 #
 #     file_excel = FileManagerEXCEL()
 #     file_excel.save_to_excel_file(report_filter_bar, path)
-

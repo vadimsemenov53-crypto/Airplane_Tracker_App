@@ -5,12 +5,13 @@ import pytest
 
 from src.file_manager_csv import FileManagerCSV
 
+
 def test_file_manager_csv_init():
     file_1 = FileManagerCSV()
     file_2 = FileManagerCSV("report.csv")
 
-    assert file_1._filename == 'data.csv'
-    assert file_2._filename == 'report.csv'
+    assert file_1._filename == "data.csv"
+    assert file_2._filename == "report.csv"
 
 
 def test_file_manager_csv_save_path(tmp_path, data_response_airplane):
@@ -30,7 +31,7 @@ def test_manager_json_save_base_path(mock_csv, mock_dir, data_response_airplane)
     mock_dir.assert_called_once()
 
     args, kwargs = mock_csv.call_args
-    assert 'Airplane_Tracker_App/data/data.csv' in args[0]
+    assert "Airplane_Tracker_App/data/data.csv" in args[0]
 
 
 def test_file_manager_csv_save(tmp_path, data_response_airplane):

@@ -10,8 +10,8 @@ def test_file_manager_excel_init():
     file_1 = FileManagerEXCEL()
     file_2 = FileManagerEXCEL("report.xlsx")
 
-    assert file_1._filename == 'data.xlsx'
-    assert file_2._filename == 'report.xlsx'
+    assert file_1._filename == "data.xlsx"
+    assert file_2._filename == "report.xlsx"
 
 
 def test_file_manager_csv_save_path(tmp_path, data_response_airplane):
@@ -31,7 +31,7 @@ def test_manager_json_save_base_path(mock_csv, mock_dir, data_response_airplane)
     mock_dir.assert_called_once()
 
     args, kwargs = mock_csv.call_args
-    assert 'Airplane_Tracker_App/data/data.xlsx' in args[0]
+    assert "Airplane_Tracker_App/data/data.xlsx" in args[0]
 
 
 def test_file_manager_exec_save(tmp_path, data_response_airplane):
