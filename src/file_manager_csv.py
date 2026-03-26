@@ -4,7 +4,7 @@ import pandas as pd
 
 from src.airplane import Airplane
 from src.base_file_manager import BaseFileManagerCSV
-from src.utils import airplanes_to_dicts
+from src.utils import airplanes_to_dicts, ensure_directory
 
 # from src.api import APICoordinates, APIAircraft
 # from src.designer_airplane import DesignerAirplane
@@ -31,7 +31,7 @@ class FileManagerCSV(BaseFileManagerCSV):
         if os.path.isdir(path_to_save):
             path_to_save = os.path.join(path_to_save, "data.csv")
 
-        os.makedirs(os.path.dirname(path_to_save), exist_ok=True)
+        ensure_directory(path_to_save)
 
         df = pd.DataFrame(airplanes_to_dicts(airplanes))
 

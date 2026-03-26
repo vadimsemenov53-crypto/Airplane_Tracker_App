@@ -5,7 +5,7 @@ from typing import cast
 
 from src.airplane import Airplane
 from src.base_file_manager import BaseFileManagerJSON
-from src.utils import airplanes_to_dicts
+from src.utils import airplanes_to_dicts, ensure_directory
 
 
 class FileManagerJson(BaseFileManagerJSON):
@@ -29,7 +29,7 @@ class FileManagerJson(BaseFileManagerJSON):
         if os.path.isdir(path_to_save):
             path_to_save = os.path.join(path_to_save, self._filename)
 
-        os.makedirs(os.path.dirname(path_to_save), exist_ok=True)
+        ensure_directory(path_to_save)
 
         data = airplanes_to_dicts(airplanes)
 
