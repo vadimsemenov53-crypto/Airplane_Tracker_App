@@ -5,7 +5,7 @@ from typing import cast
 
 from src.airplane import Airplane
 from src.base_file_manager import BaseFileManagerJSON
-from src.utils import airplanes_to_dicts, ensure_directory
+from src.utils import airplanes_to_dicts, ensure_directory, get_default_path_save
 
 
 class FileManagerJson(BaseFileManagerJSON):
@@ -23,8 +23,7 @@ class FileManagerJson(BaseFileManagerJSON):
             raise ValueError("Переданы пустые данные.")
 
         if not path_to_save:
-            data_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
-            path_to_save = os.path.join(data_dir, self._filename)
+            path_to_save = get_default_path_save(self._filename)
 
         if os.path.isdir(path_to_save):
             path_to_save = os.path.join(path_to_save, self._filename)

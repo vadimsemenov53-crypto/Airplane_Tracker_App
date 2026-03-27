@@ -24,15 +24,19 @@ def test_manager_json_save_path(tmp_path, data_response_airplane):
 
 
 @patch("os.makedirs")
+@patch("src.file_manager_json.get_default_path_save")
 @patch("builtins.open")
-def test_manager_json_save_base_path(mock_open, mock_dir, data_response_airplane):
+def test_manager_json_save_base_path(mock_open, mock_get_path, mock_dir, data_response_airplane):
+    mock_get_path.return_value = "test_path/data.json"
+
     file = FileManagerJson()
     file.save_to_json_file(data_response_airplane, path_to_save=None)
 
+    mock_get_path.assert_called_once()
     mock_dir.assert_called_once()
 
     args, kwargs = mock_open.call_args
-    assert "Airplane_Tracker_App/data/data.json" in args[0]
+    assert "test_path/data.json" in args[0]
 
 
 def test_manager_json_save(tmp_path, data_response_airplane):
