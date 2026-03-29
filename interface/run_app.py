@@ -72,87 +72,97 @@ def get_file_manager(file_name: str | None = None):
 
 def handle_save(report: list[Airplane] | None = None) -> None:
     """Вспомогательная функция для сохранения переданных данных в файл."""
-    show_message("Передайте имя для файла"
-                 "Пример: 'report_api.json' "
-                 "Или попустите файл сохранить со стандартным именем (data.json)")
-    file_name = str(ask_user()).strip()
-
-    if file_name:
-        file = get_file_manager(file_name)
-
-        show_message("Передайте путь для сохранения файла")
-        path_to_save = str(ask_user()).strip()
-
-        file.save_to_file(report, path_to_save)
-    else:
-        file = get_file_manager()
-
     if report:
-        show_message("Передайте путь для сохранения файла")
-        path_to_save = str(ask_user()).strip()
+        show_message("Передайте имя для файла"
+                     "Пример: 'report_api.json' "
+                     "Или попустите файл сохранить со стандартным именем (data.json)")
+        file_name = str(ask_user()).strip()
 
-        file.save_to_file(report, path_to_save)
+        if file_name:
+            file = get_file_manager(file_name)
 
-    elif choice_format == 2:
-        file = FileManagerCSV()
+            show_message("Передайте путь для сохранения файла")
+            path_to_save = str(ask_user()).strip()
 
-        show_message("Передайте путь для сохранения файла")
-        path_to_save = str(ask_user()).strip()
+            file.save_to_file(report, path_to_save)
+        else:
+            file = get_file_manager()
 
-        file.save_to_file(report, path_to_save)
+            show_message("Передайте путь для сохранения файла")
+            path_to_save = str(ask_user()).strip()
 
-    elif choice_format == 3:
-        file = FileManagerEXCEL()
-
-        show_message("Передайте путь для сохранения файла")
-        path_to_save = str(ask_user()).strip()
-
-        file.save_to_file(report, path_to_save)
+            file.save_to_file(report, path_to_save)
 
     else:
-        show_message("Выбран неверный формат")
+        handle_file_operations()
+
+def handle_file_operations() -> None:
+    """ Вспомогательная функция для работы с уже существующими файлами """
+    file = get_file_manager()
+
+    while True:
+        show_message("""
+        Вам доступно: 
+        1- Чтение данных 
+        2- Добавление данных 
+        3- Удаление данных
+        """)
+        choice_work = int(ask_user())
+
+        if choice_work == 1:
+            show_message("Передайте путь до файла.")
+            path_to_file = str(ask_user()).strip()
+
+            print(file.read_file(path_to_file))
+
+        elif choice_work == 2:
+            show_message("Передайте путь до файла.")
+            path_to_file = str(ask_user()).strip()
+
+            obj_air = get_airplane_object()
+
+            file.add_info_file([obj_air], path_to_file)
+
+        elif choice_work == 3:
+            show_message("Передайте путь до файла.")
+            path_to_file = str(ask_user()).strip()
+
+            show_message("Передайте позывной для удаления самолета")
+            callsign = str(ask_user()).strip().upper()
+
+            file.delete_info_file(callsign, path_to_file)
 
 
-        if not report:
-            while True:
-                show_message("""
-                Вам доступно: 
-                1- Чтение данных 
-                2- Добавление данных 
-                3- Удаление данных
-                """)
-                choice_work = int(ask_user())
+def get_airplane_object():
+    """ Вспомогательная функция конструктор объектов самолетов """
+    show_message("Заполните параметры самолета (Страна, Позывной, Скорость, Вертикальная скорость, Высота полета.)"
+                 "Напишите параметры через запятую"
+                 "Пример: Germany, DLH123, 250.5, 5.2, 11000")
 
-                if choice_format == 1:
-                    file = FileManagerJson()
+    user_input = ask_user().strip()
+    params = [p.strip() for p in user_input.split(",")]
 
-                    if choice_work == 1:
-                        show_message("Передайте путь до файла.")
-                        path_to_file = str(ask_user()).strip()
+    if len(params) != 5:
+        show_message("Ошибка: нужно ввести ровно 5 параметров.")
+        return None
 
-                        print(file.read_file_json(path_to_file))
+    country, callsign, velocity, vertical_rate, bar_altitude = params
 
-                elif choice_format == 2:
-                    file = FileManagerCSV()
+    try:
+        velocity = float(velocity)
+        vertical_rate = float(vertical_rate)
+        bar_altitude = float(bar_altitude)
+    except ValueError:
+        show_message("Ошибка: скорость и высота должны быть числами.")
+        return None
 
-                    if choice_work == 1:
-                        show_message("Передайте путь до файла.")
-                        path_to_file = str(ask_user()).strip()
-
-                        print(file.read_file_csv(path_to_file))
-
-                elif choice_format == 3:
-                    file = FileManagerEXCEL()
-
-                    if choice_work == 1:
-                        show_message("Передайте путь до файла.")
-                        path_to_file = str(ask_user()).strip()
-
-                        print(file.read_file_excel(path_to_file))
-
-
-
-
+    return Airplane(
+        country=country,
+        callsign=callsign,
+        velocity=velocity,
+        vertical_rate=vertical_rate,
+        bar_altitude=bar_altitude
+    )
 
 
 
@@ -178,7 +188,7 @@ def run_app():
                 handle_save(result_api)
 
         elif choice_menu == 2:
-            get_file_format_user()
+            handle_file_operations()
 
         elif choice_menu == 3:
             show_message("Завершение работы.")
@@ -195,12 +205,12 @@ def get_api_data() -> list[Airplane] | None:
     api_1.get_coordinates()
 
     api_2 = APIAircraft()
-    api_2.get_response_api(api_1._coordinates)
+    api_2.get_response_api(api_1.coordinates)
 
-    data_air = api_2._aeroplanes
+    data_air = api_2.aeroplanes
 
     designer = DesignerAirplane(data_air)
-    report = designer._get_report()
+    report = designer.get_report()
 
     show_message("Вывести результат в консоль? (Y-да, N-нет)")
     choice_report = str(ask_user()).strip().upper()
@@ -217,7 +227,7 @@ def get_api_data() -> list[Airplane] | None:
         choice_report_filter = int(ask_user())
 
         if choice_report_filter == 1:
-            filter_report = designer._filtered_velocity()
+            filter_report = designer.filtered_velocity()
 
             show_message("Вывести результат в консоль? (Y-да, N-нет)")
             choice_filter = str(ask_user()).strip().upper()
@@ -232,7 +242,7 @@ def get_api_data() -> list[Airplane] | None:
                     show_report(filter_report)
 
         elif choice_report_filter == 2:
-            filter_report = designer._filtered_bar_altitude()
+            filter_report = designer.filtered_bar_altitude()
 
             show_message("Вывести результат в консоль? (Y-да, N-нет)")
             choice_filter = str(ask_user()).strip().upper()

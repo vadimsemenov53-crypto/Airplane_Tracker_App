@@ -9,7 +9,7 @@ class APICoordinates(BaseApiWork):
     def __init__(self) -> None:
         """Метод - конструктор, для инициализации объектов класса."""
         self.__url = "https://nominatim.openstreetmap.org/search"
-        self._coordinates: dict[str, str] | None = None
+        self.coordinates: dict[str, str] | None = None
         self._data_response: dict | list | None = None
 
     @property
@@ -44,7 +44,7 @@ class APICoordinates(BaseApiWork):
         geo_coordinates = self._data_response[0].get("boundingbox")
 
         # Параметры для фильтрации самолетов по их географическим координатам.
-        self._coordinates = {
+        self.coordinates = {
             "lamin": geo_coordinates[0],
             "lamax": geo_coordinates[1],
             "lomin": geo_coordinates[2],
@@ -59,7 +59,7 @@ class APIAircraft(BaseApiWork):
     def __init__(self) -> None:
         """Метод - конструктор, для инициализации объектов класса."""
         self.__url = "https://opensky-network.org/api/states/all?"
-        self._aeroplanes: dict | list | None = None
+        self.aeroplanes: dict | list | None = None
 
     @property
     def url(self) -> str:
@@ -69,4 +69,4 @@ class APIAircraft(BaseApiWork):
     def get_response_api(self, param: Union[str, dict[str, str]]) -> None:
         """Метод обращения к внешнему API и получения информации о самолетах."""
 
-        self._aeroplanes = self._make_request(self.__url, param)
+        self.aeroplanes = self._make_request(self.__url, param)

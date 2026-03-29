@@ -11,13 +11,12 @@ class DesignerAirplane(BaseDesignerAirplane):
             raise ValueError("Данные пустые или не переданы.")
 
         self._data = _data
+        self._result_data: list[Airplane] = []
 
-    def _get_report(self) -> list[Airplane]:
+    def get_report(self) -> list[Airplane]:
         """Метод для формирования отчета."""
         if not self._data or "states" not in self._data:
             raise ValueError("Некорректные данные API.")
-
-        self._result_data: list[Airplane] = []
 
         for airline in self._data["states"]:
             if airline:
@@ -36,10 +35,10 @@ class DesignerAirplane(BaseDesignerAirplane):
         """Приватный метод, для фильтрации значений скорости и высоты."""
         return float(value) if isinstance(value, (int, float)) else 0.0
 
-    def _filtered_velocity(self) -> list[Airplane]:
+    def filtered_velocity(self) -> list[Airplane]:
         """Метод - фильтрация самолетов по скорости(убывание)."""
         return sorted(self._result_data, key=lambda x: x.velocity, reverse=True)
 
-    def _filtered_bar_altitude(self) -> list[Airplane]:
+    def filtered_bar_altitude(self) -> list[Airplane]:
         """Метод - фильтрация самолетов по высоте."""
         return sorted(self._result_data, key=lambda x: x.bar_altitude, reverse=True)
