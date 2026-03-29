@@ -40,18 +40,18 @@ class FileManagerCSV(BaseFileManagerCSV):
         except OSError as e:
             raise RuntimeError(f"Ошибка записи: {e}") from e
 
-    def read_file_csv(self, path_to_file: str) -> pd.DataFrame:
+    def read_file(self, path_to_file: str) -> pd.DataFrame:
         """Метод чтения данных из файла (CSV)."""
         if not os.path.exists(path_to_file):
             raise FileNotFoundError(f"Файл не найден: {path_to_file}")
 
         return pd.read_csv(path_to_file)
 
-    def add_info_file_csv(self, airplane: list[Airplane], path_to_file: str) -> None:
+    def add_info_file(self, airplane: list[Airplane], path_to_file: str) -> None:
         """Метод добавления информации о самолете в файл (CSV)."""
         new_df = pd.DataFrame(airplanes_to_dicts(airplane))
 
-        df = self.read_file_csv(path_to_file)
+        df = self.read_file(path_to_file)
 
         combined_df = pd.concat([df, new_df], ignore_index=True)
         combined_df = combined_df.drop_duplicates()
@@ -62,9 +62,9 @@ class FileManagerCSV(BaseFileManagerCSV):
         except OSError as e:
             raise RuntimeError(f"Ошибка записи: {e}") from e
 
-    def delete_info_file_csv(self, callsign: str, path_to_file: str) -> None:
+    def delete_info_file(self, callsign: str, path_to_file: str) -> None:
         """Метод удаления информации о самолете по переданному позывному (callsign)."""
-        df = self.read_file_csv(path_to_file)
+        df = self.read_file(path_to_file)
 
         df = df[df["callsign"] != callsign]
 

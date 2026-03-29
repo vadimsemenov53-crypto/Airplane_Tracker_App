@@ -39,7 +39,7 @@ class FileManagerJson(BaseFileManagerJSON):
         except OSError as e:
             raise RuntimeError(f"Ошибка записи: {e}") from e
 
-    def read_file_json(self, path_to_file: str) -> list[dict[str, str | int | float | None]]:
+    def read_file(self, path_to_file: str) -> list[dict[str, str | int | float | None]]:
         """Метод чтения данных из файла (JSON)."""
         try:
             with open(path_to_file, "r", encoding="utf-8") as file:
@@ -62,11 +62,11 @@ class FileManagerJson(BaseFileManagerJSON):
             raise ValueError("Файл должен содержать список объектов.")
         return data
 
-    def add_info_file_json(self, airplanes: list[Airplane], path_to_file: str) -> None:
+    def add_info_file(self, airplanes: list[Airplane], path_to_file: str) -> None:
         """Метод добавления информации о самолете в файл (JSON)."""
         new_data = airplanes_to_dicts(airplanes)
 
-        data_file = self.read_file_json(path_to_file)
+        data_file = self.read_file(path_to_file)
 
         self._ensure_list(data_file)
 
@@ -77,9 +77,9 @@ class FileManagerJson(BaseFileManagerJSON):
         with open(path_to_file, "w", encoding="utf-8") as file:
             json.dump(data_file, file, indent=2, ensure_ascii=False, default=str)
 
-    def delete_info_file_json(self, callsign: str, path_to_file: str) -> None:
+    def delete_info_file(self, callsign: str, path_to_file: str) -> None:
         """Метод удаления информации о самолете по переданному позывному (callsign)."""
-        data_file = self.read_file_json(path_to_file)
+        data_file = self.read_file(path_to_file)
 
         self._ensure_list(data_file)
 
