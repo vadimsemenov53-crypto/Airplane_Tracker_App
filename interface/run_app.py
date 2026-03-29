@@ -121,7 +121,8 @@ def handle_file_operations() -> None:
 
             obj_air = get_airplane_object()
 
-            file.add_info_file([obj_air], path_to_file)
+            if obj_air:
+                file.add_info_file([obj_air], path_to_file)
 
         elif choice_work == 3:
             show_message("Передайте путь до файла.")
@@ -233,11 +234,11 @@ def get_api_data() -> list[Airplane] | None:
             choice_filter = str(ask_user()).strip().upper()
 
             show_message("Сделать топ? (1, 2, 3 ... или Enter для пропуска.)")
-            choice_filter_top = int(ask_user())
+            choice_filter_top = ask_user().strip()
 
             if choice_filter == "Y":
-                if isinstance(choice_filter_top, int):
-                    show_report(filter_report, choice_filter_top)
+                if choice_filter_top.isdigit():
+                    show_report(filter_report, int(choice_filter_top))
                 else:
                     show_report(filter_report)
 
@@ -248,11 +249,11 @@ def get_api_data() -> list[Airplane] | None:
             choice_filter = str(ask_user()).strip().upper()
 
             show_message("Сделать топ? (1, 2, 3 ... или Enter для пропуска.)")
-            choice_filter_top = int(ask_user())
+            choice_filter_top = ask_user().strip()
 
             if choice_filter == "Y":
-                if isinstance(choice_filter_top, int):
-                    show_report(filter_report, choice_filter_top)
+                if choice_filter_top.isdigit():
+                    show_report(filter_report, int(choice_filter_top))
                 else:
                     show_report(filter_report)
 
