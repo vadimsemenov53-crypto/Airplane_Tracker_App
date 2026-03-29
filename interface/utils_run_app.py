@@ -1,22 +1,25 @@
-from src.api import APICoordinates, APIAircraft
-from src.designer_airplane import DesignerAirplane
+from typing import cast
+
 from src.airplane import Airplane
-from src.file_manager_json import FileManagerJson
+from src.api import APIAircraft, APICoordinates
+from src.designer_airplane import DesignerAirplane
 from src.file_manager_csv import FileManagerCSV
 from src.file_manager_excel import FileManagerEXCEL
+from src.file_manager_json import FileManagerJson
+
 
 def ask_user() -> str:
-    """ Вспомогательная функция для взаимодействия с пользователем. """
-    return input(f"Пользователь: ")
+    """Вспомогательная функция для взаимодействия с пользователем."""
+    return input("Пользователь: ")
 
 
 def show_message(message: str) -> None:
-    """ Вспомогательная функция вывода в консоль сообщения от программы. """
+    """Вспомогательная функция вывода в консоль сообщения от программы."""
     print(f"\nПрограмма:\n{message}")
 
 
 def show_report(airplanes: list[Airplane], limit: int | None = None) -> None:
-    """ Вспомогательная функция вывода в консоль результатов отчета. """
+    """Вспомогательная функция вывода в консоль результатов отчета."""
     for i, air in enumerate(airplanes, start=1):
         if limit and i > limit:
             break
@@ -25,7 +28,7 @@ def show_report(airplanes: list[Airplane], limit: int | None = None) -> None:
 
 
 def get_file_format_user() -> int | None:
-    """ Вспомогательная функция для выбора форма файлов для работы (JSON, CSV, EXCEL) """
+    """Вспомогательная функция для выбора форма файлов для работы (JSON, CSV, EXCEL)"""
     while True:
         show_message("""
         Выберите формат в котором вы собираетесь работать:
@@ -38,18 +41,18 @@ def get_file_format_user() -> int | None:
 
         if format_file == 4:
             show_message("Завершение работы с файлами.")
-            break
+            return None
 
-        elif format_file not in (1, 2 ,3, 4):
+        elif format_file not in (1, 2, 3, 4):
             show_message("Неверный выбор (1, 2, 3, 4)")
 
         else:
             return format_file
 
 
-def get_file_manager(file_name: str | None = None):
-    """ Вспомогательная функция для передачи имени файла
-     и создание объекта класса FileManagerJSON / CSV / EXCEL."""
+def get_file_manager(file_name: str | None = None) -> FileManagerJson | FileManagerCSV | FileManagerEXCEL:
+    """Вспомогательная функция для передачи имени файла
+    и создание объекта класса FileManagerJSON / CSV / EXCEL."""
     format_file = get_file_format_user()
 
     if format_file == 1:
@@ -73,9 +76,11 @@ def get_file_manager(file_name: str | None = None):
 def handle_save(report: list[Airplane] | None = None) -> None:
     """Вспомогательная функция для сохранения переданных данных в файл."""
     if report:
-        show_message("Передайте имя для файла"
-                     "Пример: 'report_api.json' "
-                     "Или попустите файл сохранить со стандартным именем (data.json)")
+        show_message(
+            "Передайте имя для файла"
+            "Пример: 'report_api.json' "
+            "Или попустите файл сохранить со стандартным именем (data.json)"
+        )
         file_name = str(ask_user()).strip()
 
         if file_name:
@@ -96,15 +101,16 @@ def handle_save(report: list[Airplane] | None = None) -> None:
     else:
         handle_file_operations()
 
+
 def handle_file_operations() -> None:
-    """ Вспомогательная функция для работы с уже существующими файлами """
+    """Вспомогательная функция для работы с уже существующими файлами"""
     file = get_file_manager()
 
     while True:
         show_message("""
-        Вам доступно: 
-        1- Чтение данных 
-        2- Добавление данных 
+        Вам доступно:
+        1- Чтение данных
+        2- Добавление данных
         3- Удаление данных
         """)
         choice_work = int(ask_user())
@@ -134,11 +140,13 @@ def handle_file_operations() -> None:
             file.delete_info_file(callsign, path_to_file)
 
 
-def get_airplane_object():
-    """ Вспомогательная функция конструктор объектов самолетов """
-    show_message("Заполните параметры самолета (Страна, Позывной, Скорость, Вертикальная скорость, Высота полета.)"
-                 "Напишите параметры через запятую"
-                 "Пример: Germany, DLH123, 250.5, 5.2, 11000")
+def get_airplane_object() -> Airplane | None:
+    """Вспомогательная функция конструктор объектов самолетов"""
+    show_message(
+        "Заполните параметры самолета (Страна, Позывной, Скорость, Вертикальная скорость, Высота полета.)"
+        "Напишите параметры через запятую"
+        "Пример: Germany, DLH123, 250.5, 5.2, 11000"
+    )
 
     user_input = ask_user().strip()
     params = [p.strip() for p in user_input.split(",")]
@@ -147,27 +155,23 @@ def get_airplane_object():
         show_message("Ошибка: нужно ввести ровно 5 параметров.")
         return None
 
-    country, callsign, velocity, vertical_rate, bar_altitude = params
+    country, callsign, velocity_str, vertical_rate_str, bar_altitude_str = params
 
     try:
-        velocity = float(velocity)
-        vertical_rate = float(vertical_rate)
-        bar_altitude = float(bar_altitude)
+        velocity = float(velocity_str)
+        vertical_rate = float(vertical_rate_str)
+        bar_altitude = float(bar_altitude_str)
     except ValueError:
         show_message("Ошибка: скорость и высота должны быть числами.")
         return None
 
     return Airplane(
-        country=country,
-        callsign=callsign,
-        velocity=velocity,
-        vertical_rate=vertical_rate,
-        bar_altitude=bar_altitude
+        country=country, callsign=callsign, velocity=velocity, vertical_rate=vertical_rate, bar_altitude=bar_altitude
     )
 
 
 def get_api_data() -> list[Airplane] | None:
-    """ Функция для реализации работы пользователя с API - сервисом. """
+    """Функция для реализации работы пользователя с API - сервисом."""
     show_message("Введите страну на английском языке (Spain, Germany...)")
     choice_country = str(ask_user()).strip().capitalize()
 
@@ -176,9 +180,17 @@ def get_api_data() -> list[Airplane] | None:
     api_1.get_coordinates()
 
     api_2 = APIAircraft()
+    if not api_1.coordinates:
+        show_message("Не удалось получить координаты")
+        return None
+
     api_2.get_response_api(api_1.coordinates)
 
-    data_air = api_2.aeroplanes
+    if not api_2.aeroplanes:
+        show_message("Нет данных о самолетах")
+        return None
+
+    data_air = cast(dict[str, list], api_2.aeroplanes)
 
     designer = DesignerAirplane(data_air)
     report = designer.get_report()
@@ -232,4 +244,4 @@ def get_api_data() -> list[Airplane] | None:
         else:
             show_message("Неверное значение.")
 
-        return report
+    return report

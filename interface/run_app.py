@@ -1,7 +1,8 @@
-from interface.utils_run_app import show_message, ask_user, get_api_data, handle_save, handle_file_operations
+from interface.utils_run_app import ask_user, get_api_data, handle_file_operations, handle_save, show_message
 
-def run_app():
-    """ Функция для реализации общего функционала и работы с пользователем. """
+
+def run_app() -> None:
+    """Функция для реализации общего функционала и работы с пользователем."""
     while True:
         show_message("""
                 Добро пожаловать в приложение Airplane Tracker.
