@@ -150,7 +150,7 @@ def file_csv_saves(tmp_path, data_response_airplane):
     path = tmp_path / "data.csv"
 
     file = FileManagerCSV()
-    file.save_to_csv_file(data_response_airplane, str(path))
+    file.save_to_file(data_response_airplane, str(path))
 
     return file
 
@@ -160,6 +160,6 @@ def file_excel_saves(tmp_path, data_response_airplane):
     path = tmp_path / "data.xlsx"
 
     file = FileManagerEXCEL()
-    file.save_to_excel_file(data_response_airplane, str(path))
+    file.save_to_file(data_response_airplane, str(path))
 
     return file

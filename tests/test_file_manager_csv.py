@@ -17,7 +17,7 @@ def test_file_manager_csv_init():
 def test_file_manager_csv_save_path(tmp_path, data_response_airplane):
     path_to_file_1 = tmp_path / "data.json"
     file_1 = FileManagerCSV()
-    file_1.save_to_csv_file(data_response_airplane, str(path_to_file_1))
+    file_1.save_to_file(data_response_airplane, str(path_to_file_1))
 
     assert path_to_file_1.exists()
 
@@ -26,7 +26,7 @@ def test_file_manager_csv_save_path(tmp_path, data_response_airplane):
 @patch("pandas.DataFrame.to_csv")
 def test_manager_json_save_base_path(mock_csv, mock_dir, data_response_airplane):
     file = FileManagerCSV()
-    file.save_to_csv_file(data_response_airplane, path_to_save=None)
+    file.save_to_file(data_response_airplane, path_to_save=None)
 
     mock_dir.assert_called_once()
 
@@ -38,7 +38,7 @@ def test_file_manager_csv_save(tmp_path, data_response_airplane):
     path = tmp_path / "data.csv"
 
     file = FileManagerCSV()
-    file.save_to_csv_file(data_response_airplane, str(path))
+    file.save_to_file(data_response_airplane, str(path))
 
     assert path.exists()
 
@@ -53,12 +53,12 @@ def test_file_manager_csv_save_error(tmp_path):
 
     file = FileManagerCSV()
     with pytest.raises(ValueError, match="Переданы пустые данные."):
-        file.save_to_csv_file([], str(path))
+        file.save_to_file([], str(path))
 
 
 def test_file_manager_csv_save_is_dir(tmp_path, data_response_airplane):
     file = FileManagerCSV()
-    file.save_to_csv_file(data_response_airplane, str(tmp_path))
+    file.save_to_file(data_response_airplane, str(tmp_path))
 
     path = tmp_path / "data.csv"
     assert path.exists()
@@ -75,12 +75,12 @@ def test_file_manager_csv_save_os_error(mock_open, tmp_path, data_response_airpl
 
     file = FileManagerCSV()
     with pytest.raises(RuntimeError, match="Ошибка записи: Test error"):
-        file.save_to_csv_file(data_response_airplane, str(tmp_path))
+        file.save_to_file(data_response_airplane, str(tmp_path))
 
 
 def test_file_manager_csv_read(tmp_path, data_response_airplane):
     file = FileManagerCSV()
-    file.save_to_csv_file(data_response_airplane, str(tmp_path))
+    file.save_to_file(data_response_airplane, str(tmp_path))
 
     path = tmp_path / "data.csv"
 
@@ -102,7 +102,7 @@ def test_file_manager_csv_add(tmp_path, data_response_airplane, airplane_3):
     path = tmp_path / "data.csv"
 
     file = FileManagerCSV()
-    file.save_to_csv_file(data_response_airplane, str(path))
+    file.save_to_file(data_response_airplane, str(path))
 
     df_read = file.read_file_csv(str(path))
 

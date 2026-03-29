@@ -18,7 +18,7 @@ def test_manager_json_init():
 def test_manager_json_save_path(tmp_path, data_response_airplane):
     path_to_file_1 = tmp_path / "data.json"
     file_1 = FileManagerJson()
-    file_1.save_to_json_file(data_response_airplane, str(path_to_file_1))
+    file_1.save_to_file(data_response_airplane, str(path_to_file_1))
 
     assert path_to_file_1.exists()
 
@@ -30,7 +30,7 @@ def test_manager_json_save_base_path(mock_open, mock_get_path, mock_dir, data_re
     mock_get_path.return_value = "test_path/data.json"
 
     file = FileManagerJson()
-    file.save_to_json_file(data_response_airplane, path_to_save=None)
+    file.save_to_file(data_response_airplane, path_to_save=None)
 
     mock_get_path.assert_called_once()
     mock_dir.assert_called_once()
@@ -43,7 +43,7 @@ def test_manager_json_save(tmp_path, data_response_airplane):
     path_to_file = tmp_path / "data.json"
 
     ex_1 = FileManagerJson()
-    ex_1.save_to_json_file(data_response_airplane, str(path_to_file))
+    ex_1.save_to_file(data_response_airplane, str(path_to_file))
 
     assert path_to_file.exists()
 
@@ -61,12 +61,12 @@ def test_manager_json_save_error(tmp_path):
     ex_1 = FileManagerJson()
 
     with pytest.raises(ValueError, match="Переданы пустые данные."):
-        ex_1.save_to_json_file([], str(path_to_file))
+        ex_1.save_to_file([], str(path_to_file))
 
 
 def test_manager_json_save_is_dir(tmp_path, data_response_airplane):
     ex_1 = FileManagerJson()
-    ex_1.save_to_json_file(data_response_airplane, str(tmp_path))
+    ex_1.save_to_file(data_response_airplane, str(tmp_path))
 
     path_to_file = tmp_path / "data.json"
     assert path_to_file.exists()
@@ -86,7 +86,7 @@ def test_manager_json_save_os_error(mock_open, tmp_path, data_response_airplane)
     ex_1 = FileManagerJson()
 
     with pytest.raises(RuntimeError, match="Ошибка записи: Test error"):
-        ex_1.save_to_json_file(data_response_airplane, str(tmp_path))
+        ex_1.save_to_file(data_response_airplane, str(tmp_path))
 
     mock_open.assert_called_once()
 
@@ -141,7 +141,7 @@ def test_manager_json_add(tmp_path, airplane_3, data_response_airplane):
     path = tmp_path / "data.json"
 
     ex_1 = FileManagerJson()
-    ex_1.save_to_json_file(data_response_airplane, str(path))
+    ex_1.save_to_file(data_response_airplane, str(path))
     report = ex_1.read_file_json(str(path))
     assert len(report) == 2
 
@@ -158,7 +158,7 @@ def test_manager_json_delete(tmp_path, airplane_3, data_response_airplane):
     path = tmp_path / "data.json"
 
     ex_1 = FileManagerJson()
-    ex_1.save_to_json_file(data_response_airplane, str(path))
+    ex_1.save_to_file(data_response_airplane, str(path))
     ex_1.add_info_file_json([airplane_3], str(path))
     report = ex_1.read_file_json(str(path))
     assert len(report) == 3

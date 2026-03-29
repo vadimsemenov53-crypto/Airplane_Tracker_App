@@ -17,7 +17,7 @@ def test_file_manager_excel_init():
 def test_file_manager_csv_save_path(tmp_path, data_response_airplane):
     path_to_file_1 = tmp_path / "data.xlsx"
     file_1 = FileManagerEXCEL()
-    file_1.save_to_excel_file(data_response_airplane, str(path_to_file_1))
+    file_1.save_to_file(data_response_airplane, str(path_to_file_1))
 
     assert path_to_file_1.exists()
 
@@ -26,7 +26,7 @@ def test_file_manager_csv_save_path(tmp_path, data_response_airplane):
 @patch("pandas.DataFrame.to_excel")
 def test_manager_json_save_base_path(mock_csv, mock_dir, data_response_airplane):
     file = FileManagerEXCEL()
-    file.save_to_excel_file(data_response_airplane, path_to_save=None)
+    file.save_to_file(data_response_airplane, path_to_save=None)
 
     mock_dir.assert_called_once()
 
@@ -38,7 +38,7 @@ def test_file_manager_exec_save(tmp_path, data_response_airplane):
     path = tmp_path / "data.xlsx"
 
     file = FileManagerEXCEL()
-    file.save_to_excel_file(data_response_airplane, str(path))
+    file.save_to_file(data_response_airplane, str(path))
 
     assert path.exists()
 
@@ -53,12 +53,12 @@ def test_file_manager_excel_save_error(tmp_path):
 
     file = FileManagerEXCEL()
     with pytest.raises(ValueError, match="Переданы пустые данные."):
-        file.save_to_excel_file([], str(path))
+        file.save_to_file([], str(path))
 
 
 def test_file_manager_excel_save_is_dir(tmp_path, data_response_airplane):
     file = FileManagerEXCEL()
-    file.save_to_excel_file(data_response_airplane, str(tmp_path))
+    file.save_to_file(data_response_airplane, str(tmp_path))
 
     path = tmp_path / "data.xlsx"
     assert path.exists()
@@ -75,12 +75,12 @@ def test_file_manager_excel_save_os_error(mock_open, tmp_path, data_response_air
 
     file = FileManagerEXCEL()
     with pytest.raises(RuntimeError, match="Ошибка записи: Test error"):
-        file.save_to_excel_file(data_response_airplane, str(tmp_path))
+        file.save_to_file(data_response_airplane, str(tmp_path))
 
 
 def test_file_manager_excel_read(tmp_path, data_response_airplane):
     file = FileManagerEXCEL()
-    file.save_to_excel_file(data_response_airplane, str(tmp_path))
+    file.save_to_file(data_response_airplane, str(tmp_path))
 
     path = tmp_path / "data.xlsx"
 
@@ -102,7 +102,7 @@ def test_file_manager_excel_add(tmp_path, data_response_airplane, airplane_3):
     path = tmp_path / "data.xlsx"
 
     file = FileManagerEXCEL()
-    file.save_to_excel_file(data_response_airplane, str(path))
+    file.save_to_file(data_response_airplane, str(path))
 
     df_read = file.read_file_excel(str(path))
 
