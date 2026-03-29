@@ -10,7 +10,7 @@ def test_api_coord_base():
     api = APICoordinates()
 
     assert api.url == "https://nominatim.openstreetmap.org/search"
-    assert api._coordinates is None
+    assert api.coordinates is None
     assert api._data_response is None
 
 
@@ -48,7 +48,7 @@ def test_api_coord_get_coordinates(mock_get, response_from_map):
     api.get_response_api("Canada")
     api.get_coordinates()
 
-    assert api._coordinates == {
+    assert api.coordinates == {
         "lamax": "83.3362128",
         "lamin": "41.6765597",
         "lomax": "-52.3237664",
@@ -75,7 +75,7 @@ def test_api_air_base():
     api = APIAircraft()
 
     assert api.url == "https://opensky-network.org/api/states/all?"
-    assert api._aeroplanes is None
+    assert api.aeroplanes is None
 
 
 @patch("src.base_api_work.BaseApiWork._make_request")
@@ -85,6 +85,6 @@ def test_api_air_response(mock_get, coordinates_from_aircraft, data_airplanes):
     api = APIAircraft()
     api.get_response_api(coordinates_from_aircraft)
 
-    assert api._aeroplanes == data_airplanes
-    assert api._aeroplanes["states"][0][2] == "Switzerland"
+    assert api.aeroplanes == data_airplanes
+    assert api.aeroplanes["states"][0][2] == "Switzerland"
     mock_get.assert_called_once()
