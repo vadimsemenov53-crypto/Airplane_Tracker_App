@@ -42,7 +42,7 @@ def test_file_manager_exec_save(tmp_path, data_response_airplane):
 
     assert path.exists()
 
-    df = file.read_file_excel(str(path))
+    df = file.read_file(str(path))
 
     assert df["country"][0] == "Germany"
     assert df["country"][1] == "Spain"
@@ -63,7 +63,7 @@ def test_file_manager_excel_save_is_dir(tmp_path, data_response_airplane):
     path = tmp_path / "data.xlsx"
     assert path.exists()
 
-    df = file.read_file_excel(str(path))
+    df = file.read_file(str(path))
 
     assert df["country"][0] == "Germany"
     assert df["country"][1] == "Spain"
@@ -84,7 +84,7 @@ def test_file_manager_excel_read(tmp_path, data_response_airplane):
 
     path = tmp_path / "data.xlsx"
 
-    df_data = file.read_file_excel(str(path))
+    df_data = file.read_file(str(path))
 
     df_save = pd.DataFrame([air.get_dict_from_airplane() for air in data_response_airplane])
 
@@ -95,7 +95,7 @@ def test_file_manager_excel_read_error():
     file = FileManagerEXCEL()
 
     with pytest.raises(FileNotFoundError, match="Файл не найден: fake_path/data.xlsx"):
-        file.read_file_excel("fake_path/data.xlsx")
+        file.read_file("fake_path/data.xlsx")
 
 
 def test_file_manager_excel_add(tmp_path, data_response_airplane, airplane_3):
@@ -104,14 +104,14 @@ def test_file_manager_excel_add(tmp_path, data_response_airplane, airplane_3):
     file = FileManagerEXCEL()
     file.save_to_file(data_response_airplane, str(path))
 
-    df_read = file.read_file_excel(str(path))
+    df_read = file.read_file(str(path))
 
     df_save = pd.DataFrame([air.get_dict_from_airplane() for air in data_response_airplane])
     assert df_read.equals(df_save)
     assert df_read["country"][1] == "Spain"
 
-    file.add_info_file_excel([airplane_3], str(path))
-    df_read = file.read_file_excel(str(path))
+    file.add_info_file([airplane_3], str(path))
+    df_read = file.read_file(str(path))
 
     assert df_read["country"][2] == "Turkey"
 
@@ -124,18 +124,18 @@ def test_file_manager_excel_add_error(mock_excel, tmp_path, file_excel_saves, ai
     assert path.exists()
 
     with pytest.raises(RuntimeError, match="Ошибка записи: Test error"):
-        file_excel_saves.add_info_file_excel([airplane_3], path)
+        file_excel_saves.add_info_file([airplane_3], path)
 
 
 def test_file_manager_excel_delete(tmp_path, file_excel_saves):
     path = tmp_path / "data.xlsx"
 
-    read_file = file_excel_saves.read_file_excel(str(path))
+    read_file = file_excel_saves.read_file(str(path))
     assert read_file["callsign"][0] == "ECA4RT"
     assert read_file["callsign"][1] == "LVL2604"
 
-    file_excel_saves.delete_info_file_excel("ECA4RT", str(path))
-    read_file = file_excel_saves.read_file_excel(str(path))
+    file_excel_saves.delete_info_file("ECA4RT", str(path))
+    read_file = file_excel_saves.read_file(str(path))
 
     assert read_file["callsign"][0] == "LVL2604"
 
@@ -151,4 +151,4 @@ def test_file_manager_excel_delete_error(mock_excel, tmp_path, file_excel_saves)
     assert path.exists()
 
     with pytest.raises(RuntimeError, match="Ошибка записи: Test error"):
-        file_excel_saves.delete_info_file_excel("LVL2604", str(path))
+        file_excel_saves.delete_info_file("LVL2604", str(path))

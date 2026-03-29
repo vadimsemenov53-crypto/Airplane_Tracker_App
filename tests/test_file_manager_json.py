@@ -98,7 +98,7 @@ def test_manager_json_read(tmp_path, data_airplane_for_read):
         json.dump(data_airplane_for_read, f)
 
     ex_1 = FileManagerJson()
-    response = ex_1.read_file_json(str(path))
+    response = ex_1.read_file(str(path))
 
     assert response == data_airplane_for_read
 
@@ -106,7 +106,7 @@ def test_manager_json_read(tmp_path, data_airplane_for_read):
 def test_manager_json_read_not_file():
     ex_1 = FileManagerJson()
     with pytest.raises(FileNotFoundError, match="Файл не найден: test/test.json"):
-        ex_1.read_file_json("test/test.json")
+        ex_1.read_file("test/test.json")
 
 
 @patch("src.file_manager_json.json.load")
@@ -120,7 +120,7 @@ def test_manager_json_read_error_decod(mock_load, tmp_path):
 
     ex_1 = FileManagerJson()
     with pytest.raises(RuntimeError, match="Ошибка JSON: Декодирование"):
-        ex_1.read_file_json(str(path))
+        ex_1.read_file(str(path))
 
     mock_load.assert_called_once()
 
@@ -142,15 +142,15 @@ def test_manager_json_add(tmp_path, airplane_3, data_response_airplane):
 
     ex_1 = FileManagerJson()
     ex_1.save_to_file(data_response_airplane, str(path))
-    report = ex_1.read_file_json(str(path))
+    report = ex_1.read_file(str(path))
     assert len(report) == 2
 
-    ex_1.add_info_file_json([airplane_3], str(path))
-    report = ex_1.read_file_json(str(path))
+    ex_1.add_info_file([airplane_3], str(path))
+    report = ex_1.read_file(str(path))
     assert len(report) == 3
 
-    ex_1.add_info_file_json([airplane_3], str(path))
-    report = ex_1.read_file_json(str(path))
+    ex_1.add_info_file([airplane_3], str(path))
+    report = ex_1.read_file(str(path))
     assert len(report) == 3
 
 
@@ -159,16 +159,16 @@ def test_manager_json_delete(tmp_path, airplane_3, data_response_airplane):
 
     ex_1 = FileManagerJson()
     ex_1.save_to_file(data_response_airplane, str(path))
-    ex_1.add_info_file_json([airplane_3], str(path))
-    report = ex_1.read_file_json(str(path))
+    ex_1.add_info_file([airplane_3], str(path))
+    report = ex_1.read_file(str(path))
     assert len(report) == 3
     assert report[2]["callsign"] == "LVL2517"
 
-    ex_1.delete_info_file_json("2312", str(path))
-    report = ex_1.read_file_json(str(path))
+    ex_1.delete_info_file("2312", str(path))
+    report = ex_1.read_file(str(path))
     assert len(report) == 3
     assert report[2]["callsign"] == "LVL2517"
 
-    ex_1.delete_info_file_json("LVL2517", str(path))
-    report = ex_1.read_file_json(str(path))
+    ex_1.delete_info_file("LVL2517", str(path))
+    report = ex_1.read_file(str(path))
     assert len(report) == 2

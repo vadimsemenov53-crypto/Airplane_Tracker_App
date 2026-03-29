@@ -42,7 +42,7 @@ def test_file_manager_csv_save(tmp_path, data_response_airplane):
 
     assert path.exists()
 
-    df = file.read_file_csv(str(path))
+    df = file.read_file(str(path))
 
     assert df["country"][0] == "Germany"
     assert df["country"][1] == "Spain"
@@ -63,7 +63,7 @@ def test_file_manager_csv_save_is_dir(tmp_path, data_response_airplane):
     path = tmp_path / "data.csv"
     assert path.exists()
 
-    df = file.read_file_csv(str(path))
+    df = file.read_file(str(path))
 
     assert df["country"][0] == "Germany"
     assert df["country"][1] == "Spain"
@@ -84,7 +84,7 @@ def test_file_manager_csv_read(tmp_path, data_response_airplane):
 
     path = tmp_path / "data.csv"
 
-    df_data = file.read_file_csv(str(path))
+    df_data = file.read_file(str(path))
 
     df_save = pd.DataFrame([air.get_dict_from_airplane() for air in data_response_airplane])
 
@@ -95,7 +95,7 @@ def test_file_manager_csv_read_error():
     file = FileManagerCSV()
 
     with pytest.raises(FileNotFoundError, match="Файл не найден: fake_path/data.csv"):
-        file.read_file_csv("fake_path/data.csv")
+        file.read_file("fake_path/data.csv")
 
 
 def test_file_manager_csv_add(tmp_path, data_response_airplane, airplane_3):
@@ -104,14 +104,14 @@ def test_file_manager_csv_add(tmp_path, data_response_airplane, airplane_3):
     file = FileManagerCSV()
     file.save_to_file(data_response_airplane, str(path))
 
-    df_read = file.read_file_csv(str(path))
+    df_read = file.read_file(str(path))
 
     df_save = pd.DataFrame([air.get_dict_from_airplane() for air in data_response_airplane])
     assert df_read.equals(df_save)
     assert df_read["country"][1] == "Spain"
 
-    file.add_info_file_csv([airplane_3], str(path))
-    df_read = file.read_file_csv(str(path))
+    file.add_info_file([airplane_3], str(path))
+    df_read = file.read_file(str(path))
 
     assert df_read["country"][2] == "Turkey"
 
@@ -124,18 +124,18 @@ def test_file_manager_csv_add_error(mock_csv, tmp_path, file_csv_saves, airplane
     assert path.exists()
 
     with pytest.raises(RuntimeError, match="Ошибка записи: Test error"):
-        file_csv_saves.add_info_file_csv([airplane_3], path)
+        file_csv_saves.add_info_file([airplane_3], path)
 
 
 def test_file_manager_csv_delete(tmp_path, file_csv_saves):
     path = tmp_path / "data.csv"
 
-    read_file = file_csv_saves.read_file_csv(str(path))
+    read_file = file_csv_saves.read_file(str(path))
     assert read_file["callsign"][0] == "ECA4RT"
     assert read_file["callsign"][1] == "LVL2604"
 
-    file_csv_saves.delete_info_file_csv("ECA4RT", str(path))
-    read_file = file_csv_saves.read_file_csv(str(path))
+    file_csv_saves.delete_info_file("ECA4RT", str(path))
+    read_file = file_csv_saves.read_file(str(path))
 
     assert read_file["callsign"][0] == "LVL2604"
 
@@ -151,4 +151,4 @@ def test_file_manager_csv_delete_error(mock_csv, tmp_path, file_csv_saves):
     assert path.exists()
 
     with pytest.raises(RuntimeError, match="Ошибка записи: Test error"):
-        file_csv_saves.delete_info_file_csv("LVL2604", str(path))
+        file_csv_saves.delete_info_file("LVL2604", str(path))
