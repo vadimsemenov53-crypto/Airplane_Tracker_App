@@ -13,7 +13,7 @@ class BaseFileManagerJSON(ABC):
         self._filename = filename
 
     @abstractmethod
-    def save_to_json_file(self, airplanes: list[Airplane], path_to_save: str | None = None) -> None:
+    def save_to_file(self, airplanes: list[Airplane], path_to_save: str | None = None) -> None:
         """Метод записи переданных данных в файл (JSON)."""
         pass
 
@@ -41,7 +41,7 @@ class BaseFileManagerCSV(ABC):
         self._filename = filename
 
     @abstractmethod
-    def save_to_csv_file(self, airplanes: list[Airplane], path_to_save: str | None = None) -> None:
+    def save_to_file(self, airplanes: list[Airplane], path_to_save: str | None = None) -> None:
         """Метод записи переданных данных в файл (CSV)."""
         pass
 
@@ -69,7 +69,7 @@ class BaseFileManagerEXCEL(ABC):
         self._filename = filename
 
     @abstractmethod
-    def save_to_excel_file(self, airplanes: list[Airplane], path_to_save: str | None = None) -> None:
+    def save_to_file(self, airplanes: list[Airplane], path_to_save: str | None = None) -> None:
         """Метод записи переданных данных в файл (EXCEL)."""
         pass
 

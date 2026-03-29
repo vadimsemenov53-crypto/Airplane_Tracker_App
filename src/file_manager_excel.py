@@ -6,8 +6,8 @@ from src.airplane import Airplane
 from src.base_file_manager import BaseFileManagerEXCEL
 from src.utils import airplanes_to_dicts, ensure_directory, get_default_path_save
 
-# from src.api import APICoordinates, APIAircraft
-# from src.designer_airplane import DesignerAirplane
+from src.api import APICoordinates, APIAircraft
+from src.designer_airplane import DesignerAirplane
 
 
 class FileManagerEXCEL(BaseFileManagerEXCEL):
@@ -19,7 +19,7 @@ class FileManagerEXCEL(BaseFileManagerEXCEL):
     4. Удаление данных о самолете из файла (требуется передать путь до файла и
     передать словарь с критериями.)"""
 
-    def save_to_excel_file(self, airplanes: list[Airplane], path_to_save: str | None = None) -> None:
+    def save_to_file(self, airplanes: list[Airplane], path_to_save: str | None = None) -> None:
         """Метод записи переданных данных в файл (EXCEL)."""
         if not airplanes:
             raise ValueError("Переданы пустые данные.")
@@ -96,3 +96,5 @@ if __name__ == "__main__":
 
     file_excel = FileManagerEXCEL()
     file_excel.save_to_excel_file(report_filter_bar, path)
+
+    print(file_excel.read_file_excel(path))

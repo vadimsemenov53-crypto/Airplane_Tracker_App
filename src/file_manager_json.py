@@ -17,7 +17,7 @@ class FileManagerJson(BaseFileManagerJSON):
     4. Удаление данных о самолете из файла (требуется передать путь до файла и
     передать словарь с критериями.)"""
 
-    def save_to_json_file(self, airplanes: list[Airplane], path_to_save: str | None = None) -> None:
+    def save_to_file(self, airplanes: list[Airplane], path_to_save: str | None = None) -> None:
         """Метод записи переданных данных в файл (JSON)."""
         if not airplanes:
             raise ValueError("Переданы пустые данные.")
