@@ -8,8 +8,14 @@ from src.airplane import Airplane
 class BaseFileManagerJSON(ABC):
     """Базовый класс для работы с данными о самолетах в формате JSON."""
 
-    def __init__(self, filename: str = "data.json") -> None:
+    def __init__(self, filename: str | None = None) -> None:
         """Метод инициализации с приватным атрибутом __filename"""
+        if not filename:
+            filename = "data"
+
+        if not filename.endswith(".json"):
+            filename += ".json"
+
         self._filename = filename
 
     @abstractmethod
@@ -36,8 +42,14 @@ class BaseFileManagerJSON(ABC):
 class BaseFileManagerCSV(ABC):
     """Базовый класс для работы с данными о самолетах в формате CSV."""
 
-    def __init__(self, filename: str = "data.csv") -> None:
+    def __init__(self, filename: str | None = None) -> None:
         """Метод инициализации с приватным атрибутом _filename"""
+        if not filename:
+            filename = "data"
+
+        if not filename.endswith(".csv"):
+            filename += ".csv"
+
         self._filename = filename
 
     @abstractmethod
@@ -64,8 +76,14 @@ class BaseFileManagerCSV(ABC):
 class BaseFileManagerEXCEL(ABC):
     """Базовый класс для работы с данными о самолетах в формате EXCEL."""
 
-    def __init__(self, filename: str = "data.xlsx") -> None:
+    def __init__(self, filename: str | None = None) -> None:
         """Метод инициализации с приватным атрибутом _filename"""
+        if not filename:
+            filename = "data"
+
+        if not filename.endswith(".xlsx"):
+            filename += ".xlsx"
+
         self._filename = filename
 
     @abstractmethod

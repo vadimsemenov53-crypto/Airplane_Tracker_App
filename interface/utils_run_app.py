@@ -78,8 +78,8 @@ def handle_save(report: list[Airplane] | None = None) -> None:
     if report:
         show_message(
             "Передайте имя для файла"
-            "Пример: 'report_api.json' "
-            "Или попустите файл сохранить со стандартным именем (data.json)"
+            "Пример: 'report_api' "
+            "Или попустите файл сохранить со стандартным именем (data.json/.csv/.xlsx)"
         )
         file_name = str(ask_user()).strip()
 
@@ -112,6 +112,7 @@ def handle_file_operations() -> None:
         1- Чтение данных
         2- Добавление данных
         3- Удаление данных
+        4- Выход
         """)
         choice_work = int(ask_user())
 
@@ -138,6 +139,9 @@ def handle_file_operations() -> None:
             callsign = str(ask_user()).strip().upper()
 
             file.delete_info_file(callsign, path_to_file)
+
+        elif choice_work == 4:
+            break
 
 
 def get_airplane_object() -> Airplane | None:

@@ -25,7 +25,7 @@ class FileManagerEXCEL(BaseFileManagerEXCEL):
             path_to_save = get_default_path_save(self._filename)
 
         if os.path.isdir(path_to_save):
-            path_to_save = os.path.join(path_to_save, "data.xlsx")
+            path_to_save = os.path.join(path_to_save, self._filename)
 
         ensure_directory(path_to_save)
 
