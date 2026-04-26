@@ -1,0 +1,16 @@
+[
+  {
+    "country": "Germany",
+    "callsign": "ECA4RT",
+    "velocity": 222.98,
+    "vertical_rate": 0.33,
+    "bar_altitude": 13716
+  },
+  {
+    "country": "Spain",
+    "callsign": "LVL2604",
+    "velocity": 309.77,
+    "vertical_rate": 0,
+    "bar_altitude": 11582.4
+  }
+]

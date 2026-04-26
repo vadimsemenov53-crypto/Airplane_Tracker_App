@@ -1,0 +1,3159 @@
+[
+  {
+    "country": "France",
+    "callsign": "TVF8099 ",
+    "velocity": 237.19,
+    "vertical_rate": 0.33,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU839Z ",
+    "velocity": 229.6,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Hungary",
+    "callsign": "WMT6Z   ",
+    "velocity": 240.96,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Hungary",
+    "callsign": "WMT2400 ",
+    "velocity": 186.59,
+    "vertical_rate": 0.0,
+    "bar_altitude": 9144.0
+  },
+  {
+    "country": "Austria",
+    "callsign": "AUA64C  ",
+    "velocity": 225.75,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10370.82
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU37KY ",
+    "velocity": 71.69,
+    "vertical_rate": -4.23,
+    "bar_altitude": 594.36
+  },
+  {
+    "country": "Germany",
+    "callsign": "EWG2LD  ",
+    "velocity": 93.71,
+    "vertical_rate": -1.95,
+    "bar_altitude": 838.2
+  },
+  {
+    "country": "Germany",
+    "callsign": "EWG4UY  ",
+    "velocity": 245.0,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU62BJ ",
+    "velocity": 105.11,
+    "vertical_rate": -5.85,
+    "bar_altitude": 815.34
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU46TE ",
+    "velocity": 199.76,
+    "vertical_rate": 7.15,
+    "bar_altitude": 8572.5
+  },
+  {
+    "country": "Greece",
+    "callsign": "AEE711  ",
+    "velocity": 242.91,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Greece",
+    "callsign": "AEE2EG  ",
+    "velocity": 230.38,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Iceland",
+    "callsign": "ICE62L  ",
+    "velocity": 133.4,
+    "vertical_rate": -6.5,
+    "bar_altitude": 2514.6
+  },
+  {
+    "country": "Sweden",
+    "callsign": "NSZ83AH ",
+    "velocity": 232.98,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Brazil",
+    "callsign": "TAM8121 ",
+    "velocity": 179.73,
+    "vertical_rate": 4.23,
+    "bar_altitude": 3352.8
+  },
+  {
+    "country": "Spain",
+    "callsign": "IBS18JK ",
+    "velocity": 252.82,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10965.18
+  },
+  {
+    "country": "Hungary",
+    "callsign": "WMT1XA  ",
+    "velocity": 223.15,
+    "vertical_rate": 2.93,
+    "bar_altitude": 10774.68
+  },
+  {
+    "country": "Hungary",
+    "callsign": "WMT4ZT  ",
+    "velocity": 239.91,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Hungary",
+    "callsign": "WMT3182 ",
+    "velocity": 215.31,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Hungary",
+    "callsign": "WMT916  ",
+    "velocity": 211.91,
+    "vertical_rate": -6.18,
+    "bar_altitude": 8656.32
+  },
+  {
+    "country": "Hungary",
+    "callsign": "WZZ2AV  ",
+    "velocity": 227.27,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "India",
+    "callsign": "AIC101  ",
+    "velocity": 252.31,
+    "vertical_rate": 2.6,
+    "bar_altitude": 9845.04
+  },
+  {
+    "country": "Germany",
+    "callsign": "DEZWA   ",
+    "velocity": 38.9,
+    "vertical_rate": -3.25,
+    "bar_altitude": 396.24
+  },
+  {
+    "country": "Poland",
+    "callsign": "SPFWB   ",
+    "velocity": 136.07,
+    "vertical_rate": -0.33,
+    "bar_altitude": 9144.0
+  },
+  {
+    "country": "Germany",
+    "callsign": "EWG9818 ",
+    "velocity": 114.37,
+    "vertical_rate": -4.88,
+    "bar_altitude": 1249.68
+  },
+  {
+    "country": "France",
+    "callsign": "FGSAT   ",
+    "velocity": 53.62,
+    "vertical_rate": -22.43,
+    "bar_altitude": 1470.66
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU1930 ",
+    "velocity": 223.31,
+    "vertical_rate": 10.73,
+    "bar_altitude": 10789.92
+  },
+  {
+    "country": "Hungary",
+    "callsign": "WZZ6EJ  ",
+    "velocity": 233.68,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Austria",
+    "callsign": "BOM1    ",
+    "velocity": 207.01,
+    "vertical_rate": 10.08,
+    "bar_altitude": 6751.32
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "EXS22EF ",
+    "velocity": 226.07,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Israel",
+    "callsign": "ELY860  ",
+    "velocity": 239.99,
+    "vertical_rate": 0.33,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU95ZU ",
+    "velocity": 223.27,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11590.02
+  },
+  {
+    "country": "Israel",
+    "callsign": "ELY519  ",
+    "velocity": 223.24,
+    "vertical_rate": 0.33,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Austria",
+    "callsign": "AUA42CQ ",
+    "velocity": 227.98,
+    "vertical_rate": 0.33,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU49PY ",
+    "velocity": 125.78,
+    "vertical_rate": -2.28,
+    "bar_altitude": 2712.72
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU47DE ",
+    "velocity": 227.94,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Austria",
+    "callsign": "AUA61HK ",
+    "velocity": 248.94,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "United Arab Emirates",
+    "callsign": "UAE6JL  ",
+    "velocity": 213.73,
+    "vertical_rate": -8.45,
+    "bar_altitude": 6583.68
+  },
+  {
+    "country": "China",
+    "callsign": "CCA862  ",
+    "velocity": 184.38,
+    "vertical_rate": 13.33,
+    "bar_altitude": 4503.42
+  },
+  {
+    "country": "Hungary",
+    "callsign": "WMT7BV  ",
+    "velocity": 174.95,
+    "vertical_rate": 9.1,
+    "bar_altitude": 5273.04
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "BAW694  ",
+    "velocity": 243.53,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10675.62
+  },
+  {
+    "country": "Israel",
+    "callsign": "ELY823  ",
+    "velocity": 249.21,
+    "vertical_rate": -0.33,
+    "bar_altitude": 12192.0
+  },
+  {
+    "country": "United States",
+    "callsign": "EAGLE7  ",
+    "velocity": 81.62,
+    "vertical_rate": 0.0,
+    "bar_altitude": 3352.8
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU678J ",
+    "velocity": 232.47,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "France",
+    "callsign": "CCM91YD ",
+    "velocity": 136.24,
+    "vertical_rate": -4.88,
+    "bar_altitude": 1905.0
+  },
+  {
+    "country": "Bulgaria",
+    "callsign": "DAH1041 ",
+    "velocity": 169.16,
+    "vertical_rate": 5.85,
+    "bar_altitude": 3360.42
+  },
+  {
+    "country": "Hungary",
+    "callsign": "WZZ38   ",
+    "velocity": 231.46,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10675.62
+  },
+  {
+    "country": "Hungary",
+    "callsign": "WMT437  ",
+    "velocity": 0.0,
+    "vertical_rate": 0.0,
+    "bar_altitude": 0.0
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU743A ",
+    "velocity": 233.65,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Austria",
+    "callsign": "OEFAF   ",
+    "velocity": 203.64,
+    "vertical_rate": 0.0,
+    "bar_altitude": 9753.6
+  },
+  {
+    "country": "Hungary",
+    "callsign": "WZZ533  ",
+    "velocity": 217.39,
+    "vertical_rate": 0.0,
+    "bar_altitude": 9753.6
+  },
+  {
+    "country": "Hungary",
+    "callsign": "WMT2GP  ",
+    "velocity": 214.64,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10980.42
+  },
+  {
+    "country": "Italy",
+    "callsign": "IAVRO   ",
+    "velocity": 144.14,
+    "vertical_rate": -0.33,
+    "bar_altitude": 4572.0
+  },
+  {
+    "country": "Italy",
+    "callsign": "IOZZK   ",
+    "velocity": 44.02,
+    "vertical_rate": 0.0,
+    "bar_altitude": 320.04
+  },
+  {
+    "country": "San Marino",
+    "callsign": "T7SLA   ",
+    "velocity": 245.3,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Italy",
+    "callsign": "IOZZU   ",
+    "velocity": 30.67,
+    "vertical_rate": -1.95,
+    "bar_altitude": 160.02
+  },
+  {
+    "country": "Turkey",
+    "callsign": "THY9ML  ",
+    "velocity": 236.14,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Turkey",
+    "callsign": "THY3XR  ",
+    "velocity": 234.58,
+    "vertical_rate": -0.33,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Belgium",
+    "callsign": "BEL5UC  ",
+    "velocity": 224.02,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Morocco",
+    "callsign": "RAM910T ",
+    "velocity": 274.22,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11887.2
+  },
+  {
+    "country": "Greece",
+    "callsign": "AEZ2340 ",
+    "velocity": 149.23,
+    "vertical_rate": -1.3,
+    "bar_altitude": 3474.72
+  },
+  {
+    "country": "Cyprus",
+    "callsign": "CYP323  ",
+    "velocity": 255.28,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Israel",
+    "callsign": "HFA131  ",
+    "velocity": 111.8,
+    "vertical_rate": -0.33,
+    "bar_altitude": 7315.2
+  },
+  {
+    "country": "Belgium",
+    "callsign": "BEL3KH  ",
+    "velocity": 243.37,
+    "vertical_rate": -5.2,
+    "bar_altitude": 11681.46
+  },
+  {
+    "country": "Turkey",
+    "callsign": "THY1KQ  ",
+    "velocity": 254.9,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "EZY63VX ",
+    "velocity": 228.44,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "United Arab Emirates",
+    "callsign": "UAE1GP  ",
+    "velocity": 217.82,
+    "vertical_rate": -10.08,
+    "bar_altitude": 7597.14
+  },
+  {
+    "country": "United Arab Emirates",
+    "callsign": "UAE6AQ  ",
+    "velocity": 275.12,
+    "vertical_rate": 0.0,
+    "bar_altitude": 9448.8
+  },
+  {
+    "country": "Spain",
+    "callsign": "VOE1779 ",
+    "velocity": 196.98,
+    "vertical_rate": 9.75,
+    "bar_altitude": 6248.4
+  },
+  {
+    "country": "Turkey",
+    "callsign": "THY7CT  ",
+    "velocity": 243.37,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Turkey",
+    "callsign": "THY9XY  ",
+    "velocity": 218.74,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10050.78
+  },
+  {
+    "country": "Morocco",
+    "callsign": "RAM947B ",
+    "velocity": 231.24,
+    "vertical_rate": 7.48,
+    "bar_altitude": 9723.12
+  },
+  {
+    "country": "Turkey",
+    "callsign": "THY40B  ",
+    "velocity": 65.74,
+    "vertical_rate": -3.25,
+    "bar_altitude": 91.44
+  },
+  {
+    "country": "Poland",
+    "callsign": "ENT8HF  ",
+    "velocity": 239.29,
+    "vertical_rate": 0.33,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "United Arab Emirates",
+    "callsign": "ETD9XU  ",
+    "velocity": 275.15,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Sweden",
+    "callsign": "SAS2768 ",
+    "velocity": 233.73,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Spain",
+    "callsign": "VLG70PQ ",
+    "velocity": 233.55,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10980.42
+  },
+  {
+    "country": "United Arab Emirates",
+    "callsign": "ETD81C  ",
+    "velocity": 269.05,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Luxembourg",
+    "callsign": "LXLLL   ",
+    "velocity": 142.03,
+    "vertical_rate": 0.0,
+    "bar_altitude": 8534.4
+  },
+  {
+    "country": "Luxembourg",
+    "callsign": "JFA53G  ",
+    "velocity": 140.05,
+    "vertical_rate": -10.4,
+    "bar_altitude": 3276.6
+  },
+  {
+    "country": "United States",
+    "callsign": "DAL241  ",
+    "velocity": 230.29,
+    "vertical_rate": 0.0,
+    "bar_altitude": 9753.6
+  },
+  {
+    "country": "France",
+    "callsign": "AFR828  ",
+    "velocity": 280.52,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10058.4
+  },
+  {
+    "country": "United States",
+    "callsign": "DAL67   ",
+    "velocity": 224.11,
+    "vertical_rate": 4.88,
+    "bar_altitude": 7879.08
+  },
+  {
+    "country": "Spain",
+    "callsign": "IBE06DC ",
+    "velocity": 237.89,
+    "vertical_rate": -4.88,
+    "bar_altitude": 9494.52
+  },
+  {
+    "country": "United States",
+    "callsign": "N188MP  ",
+    "velocity": 166.62,
+    "vertical_rate": 10.73,
+    "bar_altitude": 8199.12
+  },
+  {
+    "country": "China",
+    "callsign": "CPA068  ",
+    "velocity": 253.55,
+    "vertical_rate": 7.8,
+    "bar_altitude": 7574.28
+  },
+  {
+    "country": "Turkey",
+    "callsign": "THY2WF  ",
+    "velocity": 228.97,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Turkey",
+    "callsign": "THY597  ",
+    "velocity": 217.03,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10058.4
+  },
+  {
+    "country": "China",
+    "callsign": "CSC3896 ",
+    "velocity": 224.4,
+    "vertical_rate": 5.53,
+    "bar_altitude": 6644.64
+  },
+  {
+    "country": "United Arab Emirates",
+    "callsign": "UAE9978 ",
+    "velocity": 269.6,
+    "vertical_rate": -0.33,
+    "bar_altitude": 10058.4
+  },
+  {
+    "country": "Italy",
+    "callsign": "LSA222  ",
+    "velocity": 196.23,
+    "vertical_rate": -10.73,
+    "bar_altitude": 1668.78
+  },
+  {
+    "country": "Italy",
+    "callsign": "IACMN   ",
+    "velocity": 58.46,
+    "vertical_rate": 0.0,
+    "bar_altitude": 449.58
+  },
+  {
+    "country": "Italy",
+    "callsign": "ARES44  ",
+    "velocity": 64.58,
+    "vertical_rate": 1.3,
+    "bar_altitude": 609.6
+  },
+  {
+    "country": "Kingdom of the Netherlands",
+    "callsign": "PHJRC   ",
+    "velocity": 233.54,
+    "vertical_rate": 0.33,
+    "bar_altitude": 9753.6
+  },
+  {
+    "country": "Jordan",
+    "callsign": "RJA111  ",
+    "velocity": 250.56,
+    "vertical_rate": 0.0,
+    "bar_altitude": 12184.38
+  },
+  {
+    "country": "Italy",
+    "callsign": "DLA6AA  ",
+    "velocity": 0.0,
+    "vertical_rate": 0.0,
+    "bar_altitude": 0.0
+  },
+  {
+    "country": "Poland",
+    "callsign": "LOT672  ",
+    "velocity": 228.73,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Spain",
+    "callsign": "VLG3070 ",
+    "velocity": 241.4,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10347.96
+  },
+  {
+    "country": "Italy",
+    "callsign": "DLA2CA  ",
+    "velocity": 152.32,
+    "vertical_rate": -13.0,
+    "bar_altitude": 2514.6
+  },
+  {
+    "country": "Poland",
+    "callsign": "LOT3TD  ",
+    "velocity": 235.54,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Azerbaijan",
+    "callsign": "AHY074  ",
+    "velocity": 236.83,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "EZY52TN ",
+    "velocity": 234.09,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Brazil",
+    "callsign": "TAM8073 ",
+    "velocity": 240.28,
+    "vertical_rate": 6.18,
+    "bar_altitude": 9212.58
+  },
+  {
+    "country": "Luxembourg",
+    "callsign": "LXA32B  ",
+    "velocity": 242.34,
+    "vertical_rate": 0.0,
+    "bar_altitude": 13106.4
+  },
+  {
+    "country": "Finland",
+    "callsign": "FIN24Q  ",
+    "velocity": 230.89,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Italy",
+    "callsign": "ICNTQ   ",
+    "velocity": 55.0,
+    "vertical_rate": -3.9,
+    "bar_altitude": 754.38
+  },
+  {
+    "country": "United Arab Emirates",
+    "callsign": "FDB4MA  ",
+    "velocity": 140.86,
+    "vertical_rate": -5.85,
+    "bar_altitude": 2567.94
+  },
+  {
+    "country": "Denmark",
+    "callsign": "BIO04   ",
+    "velocity": 62.87,
+    "vertical_rate": 0.65,
+    "bar_altitude": 403.86
+  },
+  {
+    "country": "Luxembourg",
+    "callsign": "LGL521F ",
+    "velocity": 164.22,
+    "vertical_rate": 0.0,
+    "bar_altitude": 7620.0
+  },
+  {
+    "country": "Spain",
+    "callsign": "VLG90KK ",
+    "velocity": 224.71,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "China",
+    "callsign": "CES5014 ",
+    "velocity": 142.87,
+    "vertical_rate": 13.66,
+    "bar_altitude": 3771.9
+  },
+  {
+    "country": "Lebanon",
+    "callsign": "MEA235  ",
+    "velocity": 211.89,
+    "vertical_rate": 4.23,
+    "bar_altitude": 6568.44
+  },
+  {
+    "country": "Ethiopia",
+    "callsign": "ETH3400 ",
+    "velocity": 243.07,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "China",
+    "callsign": "CPA234  ",
+    "velocity": 260.97,
+    "vertical_rate": 0.0,
+    "bar_altitude": 9448.8
+  },
+  {
+    "country": "Czech Republic",
+    "callsign": "TVS3214 ",
+    "velocity": 246.39,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Kingdom of the Netherlands",
+    "callsign": "KLM98X  ",
+    "velocity": 213.44,
+    "vertical_rate": 2.93,
+    "bar_altitude": 12108.18
+  },
+  {
+    "country": "Kingdom of the Netherlands",
+    "callsign": "KLM94G  ",
+    "velocity": 213.83,
+    "vertical_rate": 7.48,
+    "bar_altitude": 9685.02
+  },
+  {
+    "country": "Latvia",
+    "callsign": "SWR3BP  ",
+    "velocity": 144.16,
+    "vertical_rate": -3.9,
+    "bar_altitude": 2049.78
+  },
+  {
+    "country": "Latvia",
+    "callsign": "SWR8WA  ",
+    "velocity": 71.3,
+    "vertical_rate": -0.65,
+    "bar_altitude": -7.62
+  },
+  {
+    "country": "Latvia",
+    "callsign": "SWR51K  ",
+    "velocity": 222.26,
+    "vertical_rate": 0.0,
+    "bar_altitude": 8839.2
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR9534 ",
+    "velocity": 234.37,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Germany",
+    "callsign": "GEC8443 ",
+    "velocity": 245.77,
+    "vertical_rate": 2.6,
+    "bar_altitude": 9669.78
+  },
+  {
+    "country": "Latvia",
+    "callsign": "SWR248Z ",
+    "velocity": 102.96,
+    "vertical_rate": -3.58,
+    "bar_altitude": 1691.64
+  },
+  {
+    "country": "Turkey",
+    "callsign": "THY6412 ",
+    "velocity": 239.01,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11887.2
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "EZY15FT ",
+    "velocity": 229.02,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Qatar",
+    "callsign": "QTR8053 ",
+    "velocity": 260.03,
+    "vertical_rate": 0.0,
+    "bar_altitude": 12496.8
+  },
+  {
+    "country": "Latvia",
+    "callsign": "SWR5LD  ",
+    "velocity": 218.99,
+    "vertical_rate": 0.0,
+    "bar_altitude": 8831.58
+  },
+  {
+    "country": "Latvia",
+    "callsign": "SWR2274 ",
+    "velocity": 198.79,
+    "vertical_rate": -10.4,
+    "bar_altitude": 6507.48
+  },
+  {
+    "country": "Latvia",
+    "callsign": "BTI3FT  ",
+    "velocity": 230.27,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Germany",
+    "callsign": "SCR137  ",
+    "velocity": 225.46,
+    "vertical_rate": 0.0,
+    "bar_altitude": 9144.0
+  },
+  {
+    "country": "Germany",
+    "callsign": "SCR744  ",
+    "velocity": 213.93,
+    "vertical_rate": 0.0,
+    "bar_altitude": 12496.8
+  },
+  {
+    "country": "Turkey",
+    "callsign": "PGT7124 ",
+    "velocity": 236.7,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "EZY58UH ",
+    "velocity": 238.6,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11292.84
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "TOM358  ",
+    "velocity": 238.58,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10058.4
+  },
+  {
+    "country": "United States",
+    "callsign": "AAL239  ",
+    "velocity": 248.01,
+    "vertical_rate": 0.0,
+    "bar_altitude": 9144.0
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR8113 ",
+    "velocity": 213.51,
+    "vertical_rate": 14.96,
+    "bar_altitude": 5852.16
+  },
+  {
+    "country": "Ireland",
+    "callsign": "EIN404  ",
+    "velocity": 235.59,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "France",
+    "callsign": "AFR1285 ",
+    "velocity": 223.84,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "China",
+    "callsign": "CCA846  ",
+    "velocity": 233.78,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Turkey",
+    "callsign": "THY6NG  ",
+    "velocity": 217.54,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11567.16
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU12RY ",
+    "velocity": 131.15,
+    "vertical_rate": -2.93,
+    "bar_altitude": 1996.44
+  },
+  {
+    "country": "Austria",
+    "callsign": "AUA523  ",
+    "velocity": 199.94,
+    "vertical_rate": -10.4,
+    "bar_altitude": 7200.9
+  },
+  {
+    "country": "Austria",
+    "callsign": "AUA34X  ",
+    "velocity": 232.5,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Jordan",
+    "callsign": "RJA141  ",
+    "velocity": 227.64,
+    "vertical_rate": -0.33,
+    "bar_altitude": 10965.18
+  },
+  {
+    "country": "Jordan",
+    "callsign": "RJA117  ",
+    "velocity": 232.33,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10980.42
+  },
+  {
+    "country": "Ethiopia",
+    "callsign": "ETH3408 ",
+    "velocity": 233.22,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Jordan",
+    "callsign": "RJA109  ",
+    "velocity": 216.62,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Jordan",
+    "callsign": "RJA107  ",
+    "velocity": 206.5,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10980.42
+  },
+  {
+    "country": "Turkey",
+    "callsign": "",
+    "velocity": 269.46,
+    "vertical_rate": 0.33,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Spain",
+    "callsign": "IBE06ZA ",
+    "velocity": 240.07,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10073.64
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "WUK2QW  ",
+    "velocity": 224.45,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR8HA  ",
+    "velocity": 231.48,
+    "vertical_rate": -11.38,
+    "bar_altitude": 8092.44
+  },
+  {
+    "country": "Switzerland",
+    "callsign": "HBTDZ   ",
+    "velocity": 78.96,
+    "vertical_rate": -11.05,
+    "bar_altitude": 1021.08
+  },
+  {
+    "country": "Spain",
+    "callsign": "VLG4MA  ",
+    "velocity": 69.62,
+    "vertical_rate": -3.25,
+    "bar_altitude": 312.42
+  },
+  {
+    "country": "Czech Republic",
+    "callsign": "TVS2740 ",
+    "velocity": 240.8,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "EXS8KN  ",
+    "velocity": 225.26,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Spain",
+    "callsign": "IBE08RW ",
+    "velocity": 245.42,
+    "vertical_rate": 0.0,
+    "bar_altitude": 9753.6
+  },
+  {
+    "country": "Jordan",
+    "callsign": "RJA101  ",
+    "velocity": 162.97,
+    "vertical_rate": -6.5,
+    "bar_altitude": 4396.74
+  },
+  {
+    "country": "France",
+    "callsign": "TVF3885 ",
+    "velocity": 204.69,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "EXS61AB ",
+    "velocity": 241.65,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10660.38
+  },
+  {
+    "country": "Austria",
+    "callsign": "AUA729  ",
+    "velocity": 116.17,
+    "vertical_rate": -8.78,
+    "bar_altitude": 2506.98
+  },
+  {
+    "country": "Austria",
+    "callsign": "AUA744J ",
+    "velocity": 203.32,
+    "vertical_rate": -7.48,
+    "bar_altitude": 6957.06
+  },
+  {
+    "country": "Germany",
+    "callsign": "DFARO   ",
+    "velocity": 24.7,
+    "vertical_rate": -0.33,
+    "bar_altitude": 99.06
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "RUK86PR ",
+    "velocity": 223.17,
+    "vertical_rate": -12.03,
+    "bar_altitude": 678.18
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "EFW12LS ",
+    "velocity": 200.76,
+    "vertical_rate": 6.83,
+    "bar_altitude": 6019.8
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU84HX ",
+    "velocity": 69.72,
+    "vertical_rate": -0.33,
+    "bar_altitude": 190.5
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "EZY37GY ",
+    "velocity": 219.01,
+    "vertical_rate": 0.33,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "BAW552F ",
+    "velocity": 202.22,
+    "vertical_rate": -8.78,
+    "bar_altitude": 7955.28
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU89AW ",
+    "velocity": 204.96,
+    "vertical_rate": -4.88,
+    "bar_altitude": 8564.88
+  },
+  {
+    "country": "Poland",
+    "callsign": "RYR653Z ",
+    "velocity": 224.4,
+    "vertical_rate": -5.85,
+    "bar_altitude": 7353.3
+  },
+  {
+    "country": "Poland",
+    "callsign": "RYR7PD  ",
+    "velocity": 159.71,
+    "vertical_rate": -8.13,
+    "bar_altitude": 7056.12
+  },
+  {
+    "country": "Poland",
+    "callsign": "RYR7KW  ",
+    "velocity": 227.95,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Poland",
+    "callsign": "RYR29HK ",
+    "velocity": 103.1,
+    "vertical_rate": -1.63,
+    "bar_altitude": 1432.56
+  },
+  {
+    "country": "Poland",
+    "callsign": "RYR9YZ  ",
+    "velocity": 233.14,
+    "vertical_rate": 5.2,
+    "bar_altitude": 11529.06
+  },
+  {
+    "country": "Poland",
+    "callsign": "RYR2RE  ",
+    "velocity": 231.58,
+    "vertical_rate": -0.65,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Poland",
+    "callsign": "RYR593Y ",
+    "velocity": 237.91,
+    "vertical_rate": 3.58,
+    "bar_altitude": 11475.72
+  },
+  {
+    "country": "United States",
+    "callsign": "DAL113  ",
+    "velocity": 244.85,
+    "vertical_rate": 4.88,
+    "bar_altitude": 9525.0
+  },
+  {
+    "country": "Poland",
+    "callsign": "RYR98FC ",
+    "velocity": 238.43,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Poland",
+    "callsign": "RYR39DD ",
+    "velocity": 240.27,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11269.98
+  },
+  {
+    "country": "China",
+    "callsign": "CPA260  ",
+    "velocity": 257.81,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU91WF ",
+    "velocity": 125.16,
+    "vertical_rate": -0.33,
+    "bar_altitude": 1516.38
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH4HR  ",
+    "velocity": 255.29,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10370.82
+  },
+  {
+    "country": "Spain",
+    "callsign": "VLG5RG  ",
+    "velocity": 69.21,
+    "vertical_rate": -3.58,
+    "bar_altitude": 60.96
+  },
+  {
+    "country": "Spain",
+    "callsign": "IBE08EE ",
+    "velocity": 226.73,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Qatar",
+    "callsign": "QQE733  ",
+    "velocity": 209.91,
+    "vertical_rate": -0.33,
+    "bar_altitude": 6400.8
+  },
+  {
+    "country": "Greece",
+    "callsign": "SEH7EL  ",
+    "velocity": 233.56,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10058.4
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU79QN ",
+    "velocity": 192.09,
+    "vertical_rate": -0.33,
+    "bar_altitude": 8839.2
+  },
+  {
+    "country": "Poland",
+    "callsign": "RYR46JB ",
+    "velocity": 237.69,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11285.22
+  },
+  {
+    "country": "Poland",
+    "callsign": "RYR80NQ ",
+    "velocity": 199.72,
+    "vertical_rate": -10.08,
+    "bar_altitude": 8359.14
+  },
+  {
+    "country": "Poland",
+    "callsign": "RYR6DQ  ",
+    "velocity": 241.27,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Spain",
+    "callsign": "IBE07FE ",
+    "velocity": 227.61,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10066.02
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU81JW ",
+    "velocity": 221.43,
+    "vertical_rate": 4.55,
+    "bar_altitude": 10287.0
+  },
+  {
+    "country": "Turkey",
+    "callsign": "MNB2152 ",
+    "velocity": 221.9,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11269.98
+  },
+  {
+    "country": "Switzerland",
+    "callsign": "SWR5GT  ",
+    "velocity": 233.36,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Switzerland",
+    "callsign": "SWR98F  ",
+    "velocity": 232.02,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11590.02
+  },
+  {
+    "country": "Austria",
+    "callsign": "EJU62WR ",
+    "velocity": 9.26,
+    "vertical_rate": 0.0,
+    "bar_altitude": 0.0
+  },
+  {
+    "country": "Switzerland",
+    "callsign": "SWR533X ",
+    "velocity": 191.4,
+    "vertical_rate": 4.88,
+    "bar_altitude": 6316.98
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH3RK  ",
+    "velocity": 228.78,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10370.82
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH4AR  ",
+    "velocity": 242.96,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10660.38
+  },
+  {
+    "country": "United States",
+    "callsign": "DAL289  ",
+    "velocity": 217.29,
+    "vertical_rate": 6.18,
+    "bar_altitude": 8442.96
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH1HE  ",
+    "velocity": 142.22,
+    "vertical_rate": 0.0,
+    "bar_altitude": 3048.0
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH03A  ",
+    "velocity": 235.53,
+    "vertical_rate": -5.2,
+    "bar_altitude": 9631.68
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH3MW  ",
+    "velocity": 230.01,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10355.58
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH87A  ",
+    "velocity": 247.25,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11285.22
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH2HP  ",
+    "velocity": 223.55,
+    "vertical_rate": -0.98,
+    "bar_altitude": 11590.02
+  },
+  {
+    "country": "Montenegro",
+    "callsign": "MNE311  ",
+    "velocity": 239.72,
+    "vertical_rate": -0.33,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "China",
+    "callsign": "CSC3804 ",
+    "velocity": 273.4,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "France",
+    "callsign": "DRAGO06 ",
+    "velocity": 55.87,
+    "vertical_rate": -1.3,
+    "bar_altitude": 449.58
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH88Y  ",
+    "velocity": 241.76,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH5NW  ",
+    "velocity": 113.21,
+    "vertical_rate": -2.93,
+    "bar_altitude": 1592.58
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH1ME  ",
+    "velocity": 209.22,
+    "vertical_rate": 6.83,
+    "bar_altitude": 9906.0
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "SXN608  ",
+    "velocity": 204.92,
+    "vertical_rate": -5.2,
+    "bar_altitude": 8084.82
+  },
+  {
+    "country": "Tunisia",
+    "callsign": "LBT205  ",
+    "velocity": 234.8,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11269.98
+  },
+  {
+    "country": "Tunisia",
+    "callsign": "LBT511  ",
+    "velocity": 227.36,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10652.76
+  },
+  {
+    "country": "United States",
+    "callsign": "UAL509  ",
+    "velocity": 234.1,
+    "vertical_rate": 0.0,
+    "bar_altitude": 9753.6
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH2AE  ",
+    "velocity": 228.26,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10347.96
+  },
+  {
+    "country": "Greece",
+    "callsign": "AEE433  ",
+    "velocity": 251.99,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10058.4
+  },
+  {
+    "country": "France",
+    "callsign": "TVF21CH ",
+    "velocity": 247.85,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Germany",
+    "callsign": "LHX6NE  ",
+    "velocity": 206.87,
+    "vertical_rate": -4.55,
+    "bar_altitude": 9814.56
+  },
+  {
+    "country": "France",
+    "callsign": "AFR42UN ",
+    "velocity": 88.67,
+    "vertical_rate": -4.23,
+    "bar_altitude": 594.36
+  },
+  {
+    "country": "France",
+    "callsign": "AFR83KB ",
+    "velocity": 231.6,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10058.4
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "BAW630  ",
+    "velocity": 246.41,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10050.78
+  },
+  {
+    "country": "Tunisia",
+    "callsign": "LBT215  ",
+    "velocity": 228.45,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11887.2
+  },
+  {
+    "country": "Tunisia",
+    "callsign": "LBT762  ",
+    "velocity": 234.6,
+    "vertical_rate": -0.33,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Tunisia",
+    "callsign": "LBT704  ",
+    "velocity": 237.02,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Tunisia",
+    "callsign": "LBT555  ",
+    "velocity": 231.22,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10660.38
+  },
+  {
+    "country": "Romania",
+    "callsign": "ROT382A ",
+    "velocity": 229.72,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11269.98
+  },
+  {
+    "country": "Portugal",
+    "callsign": "NJE986Y ",
+    "velocity": 209.6,
+    "vertical_rate": -6.5,
+    "bar_altitude": 6652.26
+  },
+  {
+    "country": "Portugal",
+    "callsign": "NJE150M ",
+    "velocity": 130.39,
+    "vertical_rate": 0.33,
+    "bar_altitude": 2743.2
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "EXS83T  ",
+    "velocity": 223.03,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "BAW396U ",
+    "velocity": 249.26,
+    "vertical_rate": 0.33,
+    "bar_altitude": 11262.36
+  },
+  {
+    "country": "United States",
+    "callsign": "N766DL  ",
+    "velocity": 136.62,
+    "vertical_rate": 0.0,
+    "bar_altitude": 7620.0
+  },
+  {
+    "country": "Portugal",
+    "callsign": "NJE751U ",
+    "velocity": 208.49,
+    "vertical_rate": 0.0,
+    "bar_altitude": 12192.0
+  },
+  {
+    "country": "Saudi Arabia",
+    "callsign": "SVA237  ",
+    "velocity": 204.72,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "EZY2830 ",
+    "velocity": 215.94,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11590.02
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH1323 ",
+    "velocity": 243.33,
+    "vertical_rate": -0.33,
+    "bar_altitude": 9753.6
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "BAW7MY  ",
+    "velocity": 75.8,
+    "vertical_rate": -3.25,
+    "bar_altitude": 137.16
+  },
+  {
+    "country": "Kingdom of the Netherlands",
+    "callsign": "KLM873  ",
+    "velocity": 261.51,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH7XP  ",
+    "velocity": 77.12,
+    "vertical_rate": -3.25,
+    "bar_altitude": 243.84
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH8EM  ",
+    "velocity": 192.06,
+    "vertical_rate": 8.78,
+    "bar_altitude": 5364.48
+  },
+  {
+    "country": "Switzerland",
+    "callsign": "SWR2BK  ",
+    "velocity": 205.04,
+    "vertical_rate": 7.48,
+    "bar_altitude": 5829.3
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "AHY046  ",
+    "velocity": 249.72,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10355.58
+  },
+  {
+    "country": "Switzerland",
+    "callsign": "EZS1278 ",
+    "velocity": 221.19,
+    "vertical_rate": -5.53,
+    "bar_altitude": 7962.9
+  },
+  {
+    "country": "Switzerland",
+    "callsign": "SWR1ZM  ",
+    "velocity": 206.84,
+    "vertical_rate": 0.0,
+    "bar_altitude": 7010.4
+  },
+  {
+    "country": "Switzerland",
+    "callsign": "SWR11P  ",
+    "velocity": 229.51,
+    "vertical_rate": 0.33,
+    "bar_altitude": 8839.2
+  },
+  {
+    "country": "France",
+    "callsign": "AFR12HA ",
+    "velocity": 246.97,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "EXS3KH  ",
+    "velocity": 211.4,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Germany",
+    "callsign": "VJH357  ",
+    "velocity": 193.53,
+    "vertical_rate": 13.98,
+    "bar_altitude": 9144.0
+  },
+  {
+    "country": "France",
+    "callsign": "AFR96PZ ",
+    "velocity": 97.36,
+    "vertical_rate": -1.3,
+    "bar_altitude": 548.64
+  },
+  {
+    "country": "France",
+    "callsign": "AFR73VA ",
+    "velocity": 212.36,
+    "vertical_rate": 9.1,
+    "bar_altitude": 6416.04
+  },
+  {
+    "country": "China",
+    "callsign": "CHH728  ",
+    "velocity": 269.57,
+    "vertical_rate": -0.33,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR633K ",
+    "velocity": 80.98,
+    "vertical_rate": -4.23,
+    "bar_altitude": 373.38
+  },
+  {
+    "country": "Kingdom of the Netherlands",
+    "callsign": "TRA21H  ",
+    "velocity": 247.14,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Monaco",
+    "callsign": "3AMPJ   ",
+    "velocity": 63.31,
+    "vertical_rate": -1.63,
+    "bar_altitude": 304.8
+  },
+  {
+    "country": "Germany",
+    "callsign": "TUI3C   ",
+    "velocity": 259.19,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10058.4
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY1718 ",
+    "velocity": 73.23,
+    "vertical_rate": -3.9,
+    "bar_altitude": 121.92
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY1677 ",
+    "velocity": 208.01,
+    "vertical_rate": 2.6,
+    "bar_altitude": 7307.58
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR4RX  ",
+    "velocity": 182.22,
+    "vertical_rate": -12.35,
+    "bar_altitude": 7399.02
+  },
+  {
+    "country": "Serbia",
+    "callsign": "MPC003  ",
+    "velocity": 142.67,
+    "vertical_rate": -0.98,
+    "bar_altitude": 3048.0
+  },
+  {
+    "country": "Austria",
+    "callsign": "OEKDM   ",
+    "velocity": 64.78,
+    "vertical_rate": -0.33,
+    "bar_altitude": 5486.4
+  },
+  {
+    "country": "Turkey",
+    "callsign": "THY4ZX  ",
+    "velocity": 229.26,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10058.4
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY107  ",
+    "velocity": 216.46,
+    "vertical_rate": 0.33,
+    "bar_altitude": 9441.18
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR96EU ",
+    "velocity": 134.14,
+    "vertical_rate": -5.85,
+    "bar_altitude": 3200.4
+  },
+  {
+    "country": "United States",
+    "callsign": "UPS3    ",
+    "velocity": 249.94,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Kingdom of the Netherlands",
+    "callsign": "KLM877  ",
+    "velocity": 262.32,
+    "vertical_rate": 0.0,
+    "bar_altitude": 9448.8
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY1787 ",
+    "velocity": 235.91,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11285.22
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR3RD  ",
+    "velocity": 221.71,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Ukraine",
+    "callsign": "MGH712  ",
+    "velocity": 260.33,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Croatia",
+    "callsign": "CTN412  ",
+    "velocity": 236.73,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Tunisia",
+    "callsign": "TAR745  ",
+    "velocity": 244.25,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR4AD  ",
+    "velocity": 84.95,
+    "vertical_rate": -5.2,
+    "bar_altitude": 1165.86
+  },
+  {
+    "country": "Ireland",
+    "callsign": "EJU19EG ",
+    "velocity": 220.48,
+    "vertical_rate": 2.93,
+    "bar_altitude": 6621.78
+  },
+  {
+    "country": "Kuwait",
+    "callsign": "KAC5123 ",
+    "velocity": 226.72,
+    "vertical_rate": 0.0,
+    "bar_altitude": 9753.6
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY1739 ",
+    "velocity": 90.58,
+    "vertical_rate": 4.23,
+    "bar_altitude": 502.92
+  },
+  {
+    "country": "Turkey",
+    "callsign": "SXS4GL  ",
+    "velocity": 237.58,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11269.98
+  },
+  {
+    "country": "France",
+    "callsign": "AFR63QB ",
+    "velocity": 226.19,
+    "vertical_rate": -0.65,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR4GB  ",
+    "velocity": 239.0,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR42MY ",
+    "velocity": 229.43,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "China",
+    "callsign": "CCA950  ",
+    "velocity": 1.54,
+    "vertical_rate": 0.0,
+    "bar_altitude": 0.0
+  },
+  {
+    "country": "Kingdom of the Netherlands",
+    "callsign": "KLM1654 ",
+    "velocity": 215.1,
+    "vertical_rate": 8.13,
+    "bar_altitude": 9761.22
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR7198 ",
+    "velocity": 170.16,
+    "vertical_rate": -5.53,
+    "bar_altitude": 5013.96
+  },
+  {
+    "country": "Turkey",
+    "callsign": "SXS7FZ  ",
+    "velocity": 230.55,
+    "vertical_rate": 0.0,
+    "bar_altitude": 12192.0
+  },
+  {
+    "country": "Turkey",
+    "callsign": "SXS2WH  ",
+    "velocity": 243.69,
+    "vertical_rate": -0.33,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Croatia",
+    "callsign": "CTN385  ",
+    "velocity": 171.79,
+    "vertical_rate": -8.45,
+    "bar_altitude": 4130.04
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY1619 ",
+    "velocity": 122.51,
+    "vertical_rate": 13.66,
+    "bar_altitude": 2278.38
+  },
+  {
+    "country": "Turkey",
+    "callsign": "SXS7UJ  ",
+    "velocity": 247.0,
+    "vertical_rate": 0.33,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR3DE  ",
+    "velocity": 207.91,
+    "vertical_rate": -15.93,
+    "bar_altitude": 6797.04
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR79YV ",
+    "velocity": 227.0,
+    "vertical_rate": 0.0,
+    "bar_altitude": 12192.0
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR63UT ",
+    "velocity": 224.0,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR41NN ",
+    "velocity": 239.05,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10058.4
+  },
+  {
+    "country": "Czech Republic",
+    "callsign": "ECC752  ",
+    "velocity": 248.5,
+    "vertical_rate": 0.0,
+    "bar_altitude": 13106.4
+  },
+  {
+    "country": "Turkey",
+    "callsign": "SXS82K  ",
+    "velocity": 239.03,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10058.4
+  },
+  {
+    "country": "Greece",
+    "callsign": "AEZ2226 ",
+    "velocity": 195.7,
+    "vertical_rate": 10.08,
+    "bar_altitude": 6118.86
+  },
+  {
+    "country": "Italy",
+    "callsign": "IMADE   ",
+    "velocity": 48.64,
+    "vertical_rate": 0.33,
+    "bar_altitude": 601.98
+  },
+  {
+    "country": "France",
+    "callsign": "AFR66CJ ",
+    "velocity": 194.3,
+    "vertical_rate": -12.03,
+    "bar_altitude": 6743.7
+  },
+  {
+    "country": "Singapore",
+    "callsign": "",
+    "velocity": 6.94,
+    "vertical_rate": 0.0,
+    "bar_altitude": 0.0
+  },
+  {
+    "country": "Canada",
+    "callsign": "ACA891  ",
+    "velocity": 254.82,
+    "vertical_rate": 0.0,
+    "bar_altitude": 9144.0
+  },
+  {
+    "country": "Italy",
+    "callsign": "IOZZI   ",
+    "velocity": 64.65,
+    "vertical_rate": -0.33,
+    "bar_altitude": 1203.96
+  },
+  {
+    "country": "United Arab Emirates",
+    "callsign": "ETD11B  ",
+    "velocity": 227.89,
+    "vertical_rate": -0.33,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR81YG ",
+    "velocity": 241.32,
+    "vertical_rate": 4.23,
+    "bar_altitude": 11087.1
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR363E ",
+    "velocity": 146.54,
+    "vertical_rate": -8.45,
+    "bar_altitude": 3901.44
+  },
+  {
+    "country": "Germany",
+    "callsign": "AZE499  ",
+    "velocity": 100.59,
+    "vertical_rate": 8.78,
+    "bar_altitude": 1257.3
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR284X ",
+    "velocity": 207.12,
+    "vertical_rate": -4.88,
+    "bar_altitude": 8115.3
+  },
+  {
+    "country": "Ireland",
+    "callsign": "SVA922  ",
+    "velocity": 270.36,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Egypt",
+    "callsign": "MSC816  ",
+    "velocity": 250.26,
+    "vertical_rate": -0.33,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Egypt",
+    "callsign": "MSR844  ",
+    "velocity": 265.04,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Egypt",
+    "callsign": "MSC806  ",
+    "velocity": 260.77,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Egypt",
+    "callsign": "MSR785  ",
+    "velocity": 251.53,
+    "vertical_rate": 0.0,
+    "bar_altitude": 12192.0
+  },
+  {
+    "country": "Poland",
+    "callsign": "LOT5RJ  ",
+    "velocity": 220.0,
+    "vertical_rate": 10.73,
+    "bar_altitude": 8694.42
+  },
+  {
+    "country": "France",
+    "callsign": "TVF3835 ",
+    "velocity": 228.7,
+    "vertical_rate": -0.33,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Italy",
+    "callsign": "DLH9EE  ",
+    "velocity": 140.2,
+    "vertical_rate": -6.5,
+    "bar_altitude": 3345.18
+  },
+  {
+    "country": "Egypt",
+    "callsign": "MSC820  ",
+    "velocity": 264.94,
+    "vertical_rate": 0.98,
+    "bar_altitude": 10660.38
+  },
+  {
+    "country": "Switzerland",
+    "callsign": "EZS19BN ",
+    "velocity": 228.15,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11574.78
+  },
+  {
+    "country": "Switzerland",
+    "callsign": "EZS23QB ",
+    "velocity": 222.47,
+    "vertical_rate": 6.18,
+    "bar_altitude": 8427.72
+  },
+  {
+    "country": "Spain",
+    "callsign": "VOE58UJ ",
+    "velocity": 230.72,
+    "vertical_rate": -5.85,
+    "bar_altitude": 11475.72
+  },
+  {
+    "country": "Spain",
+    "callsign": "IBE06HB ",
+    "velocity": 217.66,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10965.18
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "EXS85AQ ",
+    "velocity": 216.09,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Egypt",
+    "callsign": "MSR771  ",
+    "velocity": 237.78,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Egypt",
+    "callsign": "MSR799  ",
+    "velocity": 246.34,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Italy",
+    "callsign": "IANUB   ",
+    "velocity": 61.92,
+    "vertical_rate": -0.65,
+    "bar_altitude": 3093.72
+  },
+  {
+    "country": "Egypt",
+    "callsign": "NIA6711 ",
+    "velocity": 201.29,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10370.82
+  },
+  {
+    "country": "Egypt",
+    "callsign": "MSR703  ",
+    "velocity": 240.84,
+    "vertical_rate": -7.8,
+    "bar_altitude": 7901.94
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "BAW671  ",
+    "velocity": 233.27,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY1365 ",
+    "velocity": 170.33,
+    "vertical_rate": 10.4,
+    "bar_altitude": 5783.58
+  },
+  {
+    "country": "Spain",
+    "callsign": "IBE08BG ",
+    "velocity": 232.07,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11597.64
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY1655 ",
+    "velocity": 236.27,
+    "vertical_rate": 3.58,
+    "bar_altitude": 9982.2
+  },
+  {
+    "country": "Italy",
+    "callsign": "IBBFI   ",
+    "velocity": 70.91,
+    "vertical_rate": -0.33,
+    "bar_altitude": 487.68
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "MAGMA   ",
+    "velocity": 261.31,
+    "vertical_rate": -0.65,
+    "bar_altitude": 11887.2
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR1TZ  ",
+    "velocity": 243.28,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Italy",
+    "callsign": "IECGX   ",
+    "velocity": 27.01,
+    "vertical_rate": -6.18,
+    "bar_altitude": 129.54
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR38RJ ",
+    "velocity": 239.77,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY061  ",
+    "velocity": 243.63,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Spain",
+    "callsign": "IBE06HE ",
+    "velocity": 219.14,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10965.18
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR2ZA  ",
+    "velocity": 229.67,
+    "vertical_rate": -4.88,
+    "bar_altitude": 10607.04
+  },
+  {
+    "country": "Ireland",
+    "callsign": "SAS77G  ",
+    "velocity": 89.5,
+    "vertical_rate": -1.95,
+    "bar_altitude": 1188.72
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR4163 ",
+    "velocity": 238.04,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR41LT ",
+    "velocity": 170.18,
+    "vertical_rate": 6.5,
+    "bar_altitude": 3383.28
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY1475 ",
+    "velocity": 168.35,
+    "vertical_rate": -4.23,
+    "bar_altitude": 3947.16
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR8YE  ",
+    "velocity": 222.48,
+    "vertical_rate": 10.08,
+    "bar_altitude": 6720.84
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY896  ",
+    "velocity": 251.63,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11269.98
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "CFE31J  ",
+    "velocity": 225.98,
+    "vertical_rate": -0.33,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY715  ",
+    "velocity": 215.39,
+    "vertical_rate": 0.33,
+    "bar_altitude": 11567.16
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "MASBA   ",
+    "velocity": 185.25,
+    "vertical_rate": 10.73,
+    "bar_altitude": 4777.74
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR2YD  ",
+    "velocity": 90.9,
+    "vertical_rate": 11.38,
+    "bar_altitude": 967.74
+  },
+  {
+    "country": "Germany",
+    "callsign": "DFKMK   ",
+    "velocity": 123.81,
+    "vertical_rate": 0.33,
+    "bar_altitude": 8534.4
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR53WF ",
+    "velocity": 229.57,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Italy",
+    "callsign": "DLA55P  ",
+    "velocity": 0.0,
+    "vertical_rate": 0.0,
+    "bar_altitude": 0.0
+  },
+  {
+    "country": "Italy",
+    "callsign": "DLA3MJ  ",
+    "velocity": 201.57,
+    "vertical_rate": 9.75,
+    "bar_altitude": 7551.42
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY203  ",
+    "velocity": 133.65,
+    "vertical_rate": -3.58,
+    "bar_altitude": 1386.84
+  },
+  {
+    "country": "Malta",
+    "callsign": "KMM101  ",
+    "velocity": 232.25,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10675.62
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR6527 ",
+    "velocity": 139.58,
+    "vertical_rate": 4.88,
+    "bar_altitude": 1630.68
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR53RK ",
+    "velocity": 203.01,
+    "vertical_rate": 6.83,
+    "bar_altitude": 6880.86
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR9066 ",
+    "velocity": 228.34,
+    "vertical_rate": 6.5,
+    "bar_altitude": 8290.56
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR2V   ",
+    "velocity": 239.63,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10058.4
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR74SV ",
+    "velocity": 233.13,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10980.42
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR37GL ",
+    "velocity": 200.2,
+    "vertical_rate": 6.18,
+    "bar_altitude": 6507.48
+  },
+  {
+    "country": "Italy",
+    "callsign": "IJESD   ",
+    "velocity": 57.75,
+    "vertical_rate": -0.65,
+    "bar_altitude": 487.68
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR77RN ",
+    "velocity": 232.29,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Spain",
+    "callsign": "VLG287Y ",
+    "velocity": 224.97,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Germany",
+    "callsign": "PVD442X ",
+    "velocity": 220.91,
+    "vertical_rate": 0.0,
+    "bar_altitude": 12192.0
+  },
+  {
+    "country": "Malta",
+    "callsign": "EAU037  ",
+    "velocity": 120.66,
+    "vertical_rate": 14.96,
+    "bar_altitude": 1760.22
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR4QV  ",
+    "velocity": 233.19,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "France",
+    "callsign": "AFR43TB ",
+    "velocity": 191.1,
+    "vertical_rate": -11.7,
+    "bar_altitude": 6949.44
+  },
+  {
+    "country": "France",
+    "callsign": "AFR61XC ",
+    "velocity": 70.4,
+    "vertical_rate": -3.58,
+    "bar_altitude": 76.2
+  },
+  {
+    "country": "United States",
+    "callsign": "N960JB  ",
+    "velocity": 166.07,
+    "vertical_rate": -2.93,
+    "bar_altitude": 8366.76
+  },
+  {
+    "country": "France",
+    "callsign": "AFR73ZX ",
+    "velocity": 124.96,
+    "vertical_rate": -10.08,
+    "bar_altitude": 1264.92
+  },
+  {
+    "country": "Italy",
+    "callsign": "IBEPP   ",
+    "velocity": 49.87,
+    "vertical_rate": -0.98,
+    "bar_altitude": 1996.44
+  },
+  {
+    "country": "Italy",
+    "callsign": "AUA535T ",
+    "velocity": 140.98,
+    "vertical_rate": -4.55,
+    "bar_altitude": 2065.02
+  },
+  {
+    "country": "Italy",
+    "callsign": "INOST   ",
+    "velocity": 0.0,
+    "vertical_rate": 0.0,
+    "bar_altitude": 0.0
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY2133 ",
+    "velocity": 227.27,
+    "vertical_rate": 0.0,
+    "bar_altitude": 8229.6
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY1395 ",
+    "velocity": 127.13,
+    "vertical_rate": 9.75,
+    "bar_altitude": 1143.0
+  },
+  {
+    "country": "Ireland",
+    "callsign": "ITY1417 ",
+    "velocity": 154.38,
+    "vertical_rate": 13.33,
+    "bar_altitude": 3124.2
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR74KW ",
+    "velocity": 91.36,
+    "vertical_rate": 13.0,
+    "bar_altitude": 1120.14
+  },
+  {
+    "country": "Malta",
+    "callsign": "AEZ158C ",
+    "velocity": 208.08,
+    "vertical_rate": 12.35,
+    "bar_altitude": 6187.44
+  },
+  {
+    "country": "Ireland",
+    "callsign": "SAS1574 ",
+    "velocity": 228.85,
+    "vertical_rate": 5.2,
+    "bar_altitude": 11109.96
+  },
+  {
+    "country": "Ireland",
+    "callsign": "SAS1804 ",
+    "velocity": 235.44,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10370.82
+  },
+  {
+    "country": "Malta",
+    "callsign": "AEZ835L ",
+    "velocity": 121.05,
+    "vertical_rate": -5.2,
+    "bar_altitude": 2072.64
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR49RQ ",
+    "velocity": 227.92,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Malta",
+    "callsign": "KMM616  ",
+    "velocity": 229.96,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11574.78
+  },
+  {
+    "country": "Malta",
+    "callsign": "AEZ126F ",
+    "velocity": 113.35,
+    "vertical_rate": -9.43,
+    "bar_altitude": 2179.32
+  },
+  {
+    "country": "Malta",
+    "callsign": "WMT3CB  ",
+    "velocity": 171.19,
+    "vertical_rate": 6.18,
+    "bar_altitude": 3314.7
+  },
+  {
+    "country": "Malta",
+    "callsign": "WMT4763 ",
+    "velocity": 238.32,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10660.38
+  },
+  {
+    "country": "Italy",
+    "callsign": "DLA7KV  ",
+    "velocity": 228.76,
+    "vertical_rate": -4.88,
+    "bar_altitude": 11551.92
+  },
+  {
+    "country": "Switzerland",
+    "callsign": "HB2633  ",
+    "velocity": 58.27,
+    "vertical_rate": -0.33,
+    "bar_altitude": 1973.58
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR1311 ",
+    "velocity": 223.53,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR423B ",
+    "velocity": 226.49,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR8598 ",
+    "velocity": 220.99,
+    "vertical_rate": -13.66,
+    "bar_altitude": 5311.14
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR3UR  ",
+    "velocity": 230.48,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR350A ",
+    "velocity": 226.1,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR23ZR ",
+    "velocity": 219.74,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10058.4
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR3615 ",
+    "velocity": 240.16,
+    "vertical_rate": -4.23,
+    "bar_altitude": 10332.72
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR84FW ",
+    "velocity": 226.65,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR73ZU ",
+    "velocity": 239.3,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR83CM ",
+    "velocity": 141.41,
+    "vertical_rate": -6.5,
+    "bar_altitude": 1882.14
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR27UW ",
+    "velocity": 238.66,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR31NL ",
+    "velocity": 225.14,
+    "vertical_rate": 0.0,
+    "bar_altitude": 12192.0
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR96VH ",
+    "velocity": 190.96,
+    "vertical_rate": -9.43,
+    "bar_altitude": 6522.72
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR23CG ",
+    "velocity": 204.83,
+    "vertical_rate": 0.0,
+    "bar_altitude": 8839.2
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR2GP  ",
+    "velocity": 80.87,
+    "vertical_rate": -4.88,
+    "bar_altitude": 861.06
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR97VX ",
+    "velocity": 141.72,
+    "vertical_rate": -6.18,
+    "bar_altitude": 3756.66
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR43PX ",
+    "velocity": 237.84,
+    "vertical_rate": 11.38,
+    "bar_altitude": 9479.28
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR17KF ",
+    "velocity": 227.52,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR5TL  ",
+    "velocity": 185.59,
+    "vertical_rate": -5.2,
+    "bar_altitude": 6050.28
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR2PY  ",
+    "velocity": 221.73,
+    "vertical_rate": 8.13,
+    "bar_altitude": 8481.06
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR4ZJ  ",
+    "velocity": 80.25,
+    "vertical_rate": 15.61,
+    "bar_altitude": 114.3
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR85JL ",
+    "velocity": 159.86,
+    "vertical_rate": -2.6,
+    "bar_altitude": 3093.72
+  },
+  {
+    "country": "Saudi Arabia",
+    "callsign": "SVA3407 ",
+    "velocity": 219.72,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Portugal",
+    "callsign": "NJE544U ",
+    "velocity": 231.65,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11887.2
+  },
+  {
+    "country": "Saudi Arabia",
+    "callsign": "SVA167  ",
+    "velocity": 225.64,
+    "vertical_rate": 0.65,
+    "bar_altitude": 10965.18
+  },
+  {
+    "country": "Portugal",
+    "callsign": "NJE772K ",
+    "velocity": 220.76,
+    "vertical_rate": 0.0,
+    "bar_altitude": 12192.0
+  },
+  {
+    "country": "Portugal",
+    "callsign": "NJU535Y ",
+    "velocity": 232.85,
+    "vertical_rate": -0.33,
+    "bar_altitude": 12496.8
+  },
+  {
+    "country": "Italy",
+    "callsign": "DLA6MF  ",
+    "velocity": 168.42,
+    "vertical_rate": -10.73,
+    "bar_altitude": 4899.66
+  },
+  {
+    "country": "Italy",
+    "callsign": "AUA543  ",
+    "velocity": 104.48,
+    "vertical_rate": 0.65,
+    "bar_altitude": 1203.96
+  },
+  {
+    "country": "Switzerland",
+    "callsign": "SWR8LZ  ",
+    "velocity": 100.18,
+    "vertical_rate": -2.93,
+    "bar_altitude": 1341.12
+  },
+  {
+    "country": "Italy",
+    "callsign": "DLH2HV  ",
+    "velocity": 209.44,
+    "vertical_rate": -0.33,
+    "bar_altitude": 9144.0
+  },
+  {
+    "country": "Saudi Arabia",
+    "callsign": "HZCMJ   ",
+    "velocity": 226.88,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Malta",
+    "callsign": "VJT480  ",
+    "velocity": 237.44,
+    "vertical_rate": 0.33,
+    "bar_altitude": 13098.78
+  },
+  {
+    "country": "Ireland",
+    "callsign": "RYR2NR  ",
+    "velocity": 228.87,
+    "vertical_rate": 4.55,
+    "bar_altitude": 10591.8
+  },
+  {
+    "country": "Malta",
+    "callsign": "VCJ1MA  ",
+    "velocity": 213.14,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11887.2
+  },
+  {
+    "country": "Malta",
+    "callsign": "",
+    "velocity": 83.31,
+    "vertical_rate": 11.38,
+    "bar_altitude": 952.5
+  },
+  {
+    "country": "Malta",
+    "callsign": "VJT401  ",
+    "velocity": 236.9,
+    "vertical_rate": -0.33,
+    "bar_altitude": 13708.38
+  },
+  {
+    "country": "Saudi Arabia",
+    "callsign": "SVA144  ",
+    "velocity": 283.67,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10058.4
+  },
+  {
+    "country": "Saudi Arabia",
+    "callsign": "SVA121  ",
+    "velocity": 233.3,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10363.2
+  },
+  {
+    "country": "Malta",
+    "callsign": "MNS526  ",
+    "velocity": 241.79,
+    "vertical_rate": -2.6,
+    "bar_altitude": 9212.58
+  },
+  {
+    "country": "Saudi Arabia",
+    "callsign": "SVA918  ",
+    "velocity": 264.7,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10668.0
+  },
+  {
+    "country": "Saudi Arabia",
+    "callsign": "SVA373  ",
+    "velocity": 237.64,
+    "vertical_rate": 0.0,
+    "bar_altitude": 9753.6
+  },
+  {
+    "country": "Italy",
+    "callsign": "ID271   ",
+    "velocity": 55.24,
+    "vertical_rate": -0.65,
+    "bar_altitude": 1005.84
+  },
+  {
+    "country": "Serbia",
+    "callsign": "ASL73P  ",
+    "velocity": 137.0,
+    "vertical_rate": -5.2,
+    "bar_altitude": 2148.84
+  },
+  {
+    "country": "Malta",
+    "callsign": "WMT5RB  ",
+    "velocity": 228.84,
+    "vertical_rate": -0.33,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Egypt",
+    "callsign": "MSR791  ",
+    "velocity": 122.18,
+    "vertical_rate": -3.25,
+    "bar_altitude": 1691.64
+  },
+  {
+    "country": "Germany",
+    "callsign": "EWG44E  ",
+    "velocity": 239.61,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10058.4
+  },
+  {
+    "country": "United Kingdom",
+    "callsign": "BAW521  ",
+    "velocity": 226.15,
+    "vertical_rate": 11.05,
+    "bar_altitude": 10264.14
+  },
+  {
+    "country": "Malta",
+    "callsign": "WZZ6GT  ",
+    "velocity": 222.67,
+    "vertical_rate": -5.53,
+    "bar_altitude": 11155.68
+  },
+  {
+    "country": "Malta",
+    "callsign": "SWU1950 ",
+    "velocity": 178.9,
+    "vertical_rate": 0.0,
+    "bar_altitude": 7315.2
+  },
+  {
+    "country": "Malta",
+    "callsign": "AAE208  ",
+    "velocity": 249.89,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11887.2
+  },
+  {
+    "country": "Malta",
+    "callsign": "LWG19B  ",
+    "velocity": 93.6,
+    "vertical_rate": -4.88,
+    "bar_altitude": 1196.34
+  },
+  {
+    "country": "Malta",
+    "callsign": "WZZ8PP  ",
+    "velocity": 238.19,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Malta",
+    "callsign": "RYR2PK  ",
+    "velocity": 242.42,
+    "vertical_rate": 0.65,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Saudi Arabia",
+    "callsign": "SVA201  ",
+    "velocity": 209.17,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Greece",
+    "callsign": "AEE7VC  ",
+    "velocity": 224.65,
+    "vertical_rate": 0.0,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Greece",
+    "callsign": "AEE682  ",
+    "velocity": 219.62,
+    "vertical_rate": -0.33,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Saudi Arabia",
+    "callsign": "HZATS   ",
+    "velocity": 262.55,
+    "vertical_rate": 0.0,
+    "bar_altitude": 12496.8
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH96K  ",
+    "velocity": 218.4,
+    "vertical_rate": -0.33,
+    "bar_altitude": 10370.82
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH7JT  ",
+    "velocity": 231.58,
+    "vertical_rate": 0.0,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH2UT  ",
+    "velocity": 225.93,
+    "vertical_rate": 0.33,
+    "bar_altitude": 11582.4
+  },
+  {
+    "country": "Germany",
+    "callsign": "DLH766  ",
+    "velocity": 265.61,
+    "vertical_rate": -0.33,
+    "bar_altitude": 11277.6
+  },
+  {
+    "country": "Malta",
+    "callsign": "WZZ881  ",
+    "velocity": 221.98,
+    "vertical_rate": -0.33,
+    "bar_altitude": 10972.8
+  },
+  {
+    "country": "Malta",
+    "callsign": "WMT956  ",
+    "velocity": 133.88,
+    "vertical_rate": -7.15,
+    "bar_altitude": 2255.52
+  },
+  {
+    "country": "Italy",
+    "callsign": "IASAR   ",
+    "velocity": 0.0,
+    "vertical_rate": 0.0,
+    "bar_altitude": 0.0
+  },
+  {
+    "country": "Switzerland",
+    "callsign": "SWR9TV  ",
+    "velocity": 202.72,
+    "vertical_rate": -6.83,
+    "bar_altitude": 7322.82
+  },
+  {
+    "country": "Jordan",
+    "callsign": "AWS901  ",
+    "velocity": 255.63,
+    "vertical_rate": 0.33,
+    "bar_altitude": 10668.0
+  }
+]
